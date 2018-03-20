@@ -1,0 +1,3 @@
+export const ONLINE_START = "ONLINE_INIT";
+export const ONLINE_SUCESS = "ONLINE_SUCESS";
+export const ONLINE_FAILURE = "ONLINE_FAILURE";

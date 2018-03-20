@@ -1,0 +1,3 @@
+export const GET_TOTAL_PAGE = "PAGE_GETTOTAL";
+export const GET_PAGE_SUCESS = 'PAGE_SUCESS';
+export const GET_PAGE_FAILURE = 'PAGE_FAILRE';
