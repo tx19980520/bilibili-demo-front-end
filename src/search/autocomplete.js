@@ -1,23 +1,37 @@
 import React ,{Component}from "react"
 import {connect} from "react-redux"
 import { Icon, Button, Input, AutoComplete } from 'antd';
+import {searchInit,searchWord} from "./action.js"
 import {Row,Col} from "react-flexbox-grid"
-import {actions as animeActions} from "./action.js"
 import "./search.css"
-const Option = AutoComplete.Option;
-const OptGroup = AutoComplete.OptGroup;
 
-
-const dataSource = ['Burns Bay Road', 'Downing Street', 'Wall Street'];
 
 class Complete extends Component {
 
     constructor(context,props)
     {
         super(context,props);
-
-
+        this.clickSearchButton = this.clickSearchButton.bind(this);
+        this.searchChange = this.searchChange.bind(this);
+        this.state={
+            value:""
+        }
     }
+    clickSearchButton(){
+        if(this.state.value !== "")
+        {
+            this.search()
+        }else{
+            alert("搜索信息不能为空");
+        }
+
+    };
+    searchChange(){
+        this.setState({value:value})
+    };
+    componentDidMount(){
+        this.props.initSearch()
+    };
     render(){
         return (
             <Row>
@@ -28,19 +42,20 @@ class Complete extends Component {
                                 className="global-search"
                                 size="large"
                                 style={{ width: '100%' }}
-                                dataSource={dataSource}
-                                placeholder="try to type `b`"
+                                dataSource={this.props.searchList}
+                                placeholder="请输入你想输入搜索的内容"
                                 filterOption={(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}
                             >
-                                <Input
+                                <Input onChange={this.searchChange}
                                     suffix={(
-                                        <Button className="search-btn" size="large" type="primary">
+                                        <Button className="search-btn" size="large" type="primary" onClick={this.clickSearchButton}>
                                             <Icon type="search" />
                                         </Button>
                                     )}
                                 />
                             </AutoComplete>
-                        </div></Col>
+                        </div>
+                        </Col>
                     </Row>
                 </Col>
             </Row>
@@ -49,15 +64,15 @@ class Complete extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onPageChange: (page) => {
-            //dispatch(animeActions.fetchAnimebyPage(page))
+        initSearch:()=>{
+            dispatch(searchInit())
         },
-        initPage:()=>{
-            //dispatch(fetchPage())
+        search:()=>{
+            dispatch(searchWord())
         }
     }
 };
 const mapStateToProps = (state) =>{
-    return {totalPage:state.page.page.pages}
-}
+    return {searchList:state.search.list}
+};
 export default connect(mapStateToProps, mapDispatchToProps)(Complete);

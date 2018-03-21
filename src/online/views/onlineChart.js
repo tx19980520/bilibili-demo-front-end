@@ -12,7 +12,6 @@ class OnlineChart extends Component{
     }
     componentDidMount(){
         this.props.initOnline()
-        console.log(this.props)
     }
     render(){
         return(

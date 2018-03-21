@@ -3,6 +3,7 @@ import {view as Page} from './page/'
 import {view as Anime} from "./anime/"
 import {view as Online} from "./online/"
 import {view as Search} from "./search/"
+import {BackToTop} from "./screenup/screenup.js";
 import './App.css';
 
 
@@ -106,6 +107,7 @@ class App extends Component {
                 <Container>
                     <Middle/>
                     </Container>
+                <BackToTop/>
             </div>
         );
     }

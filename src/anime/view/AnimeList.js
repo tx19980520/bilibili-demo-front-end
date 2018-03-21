@@ -15,7 +15,6 @@ class AnimeList extends Component {
         if(this.props.animes['list']) {
             for(var index =0;index<this.props.animes['list'].length;++index)
             {
-                console.log('sdd')
                 //将chartArr[i]添加到子数组
                 currData.push(this.props.animes['list'][index]);
                 //在这里求4的余数,如果i不等于0,且可以整除 或者考虑到不满4个或等于4个的情况就要加上  i等于当前数组长度-1的时候
