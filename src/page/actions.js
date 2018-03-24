@@ -3,7 +3,7 @@ const  fetchPageStart =()=>({
         type: GET_TOTAL_PAGE
     }
 );
-const fetchPageSucess =(result)=>({
+export const fetchPageSucess =(result)=>({
         type: GET_PAGE_SUCESS,
         result
     }

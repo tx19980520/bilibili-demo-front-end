@@ -1,8 +1,9 @@
 import {SEARCH_FETCH_FIALURE,SEARCH_FETCH_START,SEARCH_FETCH_SUCESS} from "./actionType.js";
 import {SEARCH_WORD_FAILURE,SEARCH_WORD_START} from "./actionType";
-import {actions} from "../anime/";
-let fetchAnimeSucess = actions.fetchAnimeSucess
-
+import {actions as animeActions} from "../anime/";
+import {actions as pageActions} from "../page/";
+let fetchAnimeSucess = animeActions.fetchAnimeSucess
+let fetchPageSucess = pageActions.fetchPageSucess;
 const searchInitStart=()=>(
     {
     type:SEARCH_FETCH_START
@@ -17,9 +18,9 @@ const searchInitFailure=(err)=>(
         type: SEARCH_FETCH_FIALURE,
         err
     });
-export const searchInit=()=>{
+export const searchInit=(word)=>{
     return (dispatch) => {
-        const apiUrl = `/getSearchList`;
+        const apiUrl = `/getSearchList?word=`+word;//这个地方我们改成了使用动态的后台取数据
 
         dispatch(searchInitStart());
 
@@ -44,7 +45,8 @@ const searchWordFailure=(err)=>({
 let searchId = 0;
 export const searchWord=(word)=>{
     return (dispatch)=>{
-         let apiURL = `/search?word=`+word;
+         let containerUrl = `/search?word=`+word;
+         let pageUrl = `/getSearchPage?word=`+word;
          const seqId = ++ searchId;
          const dispatchIfValid=(action)=>{
              if(searchId === seqId)
@@ -53,9 +55,18 @@ export const searchWord=(word)=>{
              }
          };
         dispatchIfValid(searchWordStart());
-        fetch(apiURL).then((response)=>{
+        fetch(containerUrl).then((response)=>{
             response.json().then((responseJson)=>{
                 dispatchIfValid(fetchAnimeSucess(responseJson))
+            }).catch((err)=>{
+                dispatchIfValid(searchWordFailure(err))
+            });
+        }).catch((err)=>{
+            dispatchIfValid(searchWordFailure(err))
+        });
+        fetch(pageUrl).then((response)=>{
+            response.json().then((responseJson)=>{
+                dispatchIfValid(fetchPageSucess(responseJson))
             }).catch((err)=>{
                 dispatchIfValid(searchWordFailure(err))
             });

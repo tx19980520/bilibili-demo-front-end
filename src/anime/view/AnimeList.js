@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {AnimeItem} from "./AnimeItem.js";
 import {AnimeLine} from "./AnimeLine.js";
 import {fetchAnime} from "../actions.js";
+import { StaggeredMotion, spring, presets } from 'react-motion'
 
 class AnimeList extends Component {
     constructor(props,context){
