@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import App from './App.js';
 import './index.css';
+import "./All.css";
 import store from './Store.js'
+import BilibiliRouter from "./BilibiliRouter.js";
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <BilibiliRouter />
     </Provider>,
     document.getElementById('root')
 );

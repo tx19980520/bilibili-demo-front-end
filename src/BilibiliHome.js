@@ -4,7 +4,6 @@ import {view as Anime} from "./anime/"
 import {view as Online} from "./online/"
 import {view as Search} from "./search/"
 import {BackToTop} from "./screenup/screenup.js";
-import './App.css';
 
 
 
@@ -19,7 +18,7 @@ class Container extends React.Component {
     state = {
         collapsed: false,
     };
-    onCollapse = (collapsed) => {
+    onCollapse(collapsed){
         console.log(collapsed);
         this.setState({ collapsed });
     }
@@ -100,8 +99,8 @@ class Middle extends Component {
 }
 
 
-class App extends Component {
-    render() {
+class BilibiliHome extends Component {
+    render() {//###########到这里下面的东西可以开始改了########################
         return (
             <div>
                 <Container>
@@ -113,4 +112,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default BilibiliHome;

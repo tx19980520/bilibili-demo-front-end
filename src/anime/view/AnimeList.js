@@ -44,7 +44,7 @@ class AnimeList extends Component {
                             Motion defaultStyles={boxes}
                             styles={prevStyles => prevStyles.map((item, i) => {
                                 return i === 0
-                                    ? { scale: spring(1, { ...presets.noWobble }) }
+                                    ? { scale: spring(1, presets.noWobble) }
                                     : prevStyles[i - 1]
                             })}>
                             {interpolatingStyles =>
