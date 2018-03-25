@@ -4,14 +4,15 @@ import {AnimeItem} from "./AnimeItem.js";
 import {AnimeLine} from "./AnimeLine.js";
 import {fetchAnime} from "../actions.js";
 import { StaggeredMotion, spring, presets } from 'react-motion'
-
+import "./animeItem.css"
+import {Row,Col} from "react-flexbox-grid"
 class AnimeList extends Component {
     constructor(props,context){
         super(props,context);
         //我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
     };
     render(){
-        var lineSlide = [];
+        /*var lineSlide = [];
         var currData = [];
         if(this.props.animes['list']) {
             for(var index =0;index<this.props.animes['list'].length;++index)
@@ -27,33 +28,53 @@ class AnimeList extends Component {
                     currData = [];
                 }
             }
-        }
-
-
-        return(
-        <ul className="todo-list">
-            {
-
-                lineSlide.map((items,index) => {
-                    return(<AnimeLine key={index}>
-                    {
-                        items.map((item,i) => (
-                            <AnimeItem
-                                key={i}
-                                sessionid={item.animeId}
-                                picture={item.animePicturePath}
-                                fans={item.fans}
-                                title={item.animeTitle}
-                                animeFinished = {item.animeFinished}
-                            />))
-                    }
-                    </AnimeLine>)
-                        })
-
-
+        }*/let list = this.props.animes['list'];
+        if(list)
+        {
+            let boxes = [];
+            for (let i = 0, len = list.length; i < len; i++) {
+                boxes.push({
+                    scale: 0
+                })
             }
-        </ul>
-        )
+            return(
+                <ul>
+                    {
+                        <StaggeredMotion
+                            Motion defaultStyles={boxes}
+                            styles={prevStyles => prevStyles.map((item, i) => {
+                                return i === 0
+                                    ? { scale: spring(1, { ...presets.noWobble }) }
+                                    : prevStyles[i - 1]
+                            })}>
+                            {interpolatingStyles =>
+                                <Row>
+                                    {interpolatingStyles.map((item, i) => {
+                                        return (
+                                            <Col md={3}>
+                                            <AnimeItem
+                                                key={i}
+                                                sessionid={list[i].animeId}
+                                                picture={list[i].animePicturePath}
+                                                fans={list[i].fans}
+                                                title={list[i].animeTitle}
+                                                animeFinished = {list.animeFinished}
+                                                style={{
+                                                    transform: `scale(${item.scale}, ${item.scale})`
+                                                }}
+                                            />
+                                            </Col>);
+                                    })}
+                                </Row>
+                            }
+                        </StaggeredMotion>
+
+                    }
+                </ul>
+            )
+        }else{
+            return null;
+        }
     };
     componentDidMount() {
         this.props.initAnimeData()
