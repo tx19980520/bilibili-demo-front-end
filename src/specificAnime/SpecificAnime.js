@@ -1,1 +1,0 @@
-//打算是用meterial ui的grid list ，然后我们进入到具体的页面里面了之后我们使用jumbotron

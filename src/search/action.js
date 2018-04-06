@@ -5,9 +5,9 @@ import {actions as pageActions} from "../page/";
 let fetchAnimeSucess = animeActions.fetchAnimeSucess
 let fetchPageSucess = pageActions.fetchPageSucess;
 const searchInitStart=()=>(
-    {
-    type:SEARCH_FETCH_START
-});
+            {
+                type:SEARCH_FETCH_START
+            });
 const searchInitSucess=(result)=>(
     {
         type: SEARCH_FETCH_SUCESS,

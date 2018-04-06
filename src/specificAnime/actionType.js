@@ -1,0 +1,9 @@
+export const DATA_SUBMIT_START = "DATA_SUBMIT_START";
+export const DATA_SUBMIT_SUCESS = "DATA_SUBMIT_SUCCESS";
+export const DATA_SUBMIT_FAILURE = "DATA_SUBMIT_FAILURE";
+export const MODAL_OPEN = "MODAL_OPEN";
+export const MODAL_CLOSE = "MODAL_CLOSE";
+export const NESTED_OPEN = "NESTED_OPEN";
+export const NESTED_CLOSE = "NESTED_CLOSE";
+
+
