@@ -20,7 +20,7 @@ const searchInitFailure=(err)=>(
     });
 export const searchInit=(word)=>{
     return (dispatch) => {
-        const apiUrl = `/getSearchList?word=`+word;//这个地方我们改成了使用动态的后台取数据
+        const apiUrl = `/api/getSearchList?word=`+word;//这个地方我们改成了使用动态的后台取数据
 
         dispatch(searchInitStart());
 
@@ -45,8 +45,8 @@ const searchWordFailure=(err)=>({
 let searchId = 0;
 export const searchWord=(word)=>{
     return (dispatch)=>{
-         let containerUrl = `/search?word=`+word;
-         let pageUrl = `/getSearchPage?word=`+word;
+         let containerUrl = `/api/search?word=`+word;
+         let pageUrl = `/api/getSearchPage?word=`+word;
          const seqId = ++ searchId;
          const dispatchIfValid=(action)=>{
              if(searchId === seqId)

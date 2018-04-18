@@ -13,9 +13,9 @@ export const  fetchAnimeFailure=(error)=>({
 
 export const fetchAnime = () => {
     return (dispatch) => {
-        const apiUrl = `/getAnime`;
+        const apiUrl = `/api/getAnime`;
 
-        dispatch(fetchAnimeStart())
+        dispatch(fetchAnimeStart());
 
         return fetch(apiUrl).then((response) => {
             if (response.status !== 200 && response.status !== 304) {
@@ -34,9 +34,9 @@ export const fetchAnime = () => {
 }
 export const fetchAnimebyPage = (page) => {
     return (dispatch) => {
-        const apiUrl = `/getAnime?`+`page=`+page;
-        console.log(apiUrl)
-        dispatch(fetchAnimeStart())
+        const apiUrl = `/api/getAnime?`+`page=`+page;
+        console.log(apiUrl);
+        dispatch(fetchAnimeStart());
 
         return fetch(apiUrl).then((response) => {
             if (response.status !== 200 && response.status !== 304) {

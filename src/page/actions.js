@@ -15,7 +15,7 @@ const fetchPageFailure =(error)=>({
 );
 export const fetchPage=()=>{
     return (dispatch) => {
-        const apiUrl = `/getPage`;
+        const apiUrl = `/api/getPage`;
 
         dispatch(fetchPageStart());
 

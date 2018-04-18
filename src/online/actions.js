@@ -23,7 +23,7 @@ const fetchOnlineFailure = () =>{
 }
 export const onlineInit = ()=>{
     return (dispatch) => {
-        const apiUrl = `/getOnlineData`;
+        const apiUrl = `/api/getOnlineData`;
 
         dispatch(fetchOnlineStart());
 

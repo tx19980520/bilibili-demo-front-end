@@ -40,7 +40,7 @@ function checkStatus(response) {
 }
 export const  dataSubmit=(data)=>{
     return (dispatch) => {
-        const apiUrl = `/postNewData`;//这个地方我们改成了使用动态的后台取数据
+        const apiUrl = `/api/postNewData`;//这个地方我们改成了使用动态的后台取数据
 
         dispatch(SubmitStart());
 
