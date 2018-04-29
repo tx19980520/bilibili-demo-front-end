@@ -1,0 +1,11 @@
+.loading {
+    text-align: center;
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
+    padding: 30px 50px;
+    margin: 20px 0;
+}
+.animes {
+    margin: 20px 0;
+    /*background-color: #66a4ff38;*/
+}

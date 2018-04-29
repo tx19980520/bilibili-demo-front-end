@@ -1,5 +1,5 @@
-import React {Component} from "react"
-import {Link} from "react-router"
+import React,{Component} from "react"
+import {NavLink as Link} from "react-router-dom"
 import "./navlink.css"
 export default class NavLink extends Component{
     render()

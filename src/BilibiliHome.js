@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
-import {view as Page} from './page/'
+/*import {view as Page} from './page/'
 import {view as Anime} from "./anime/"
 import {view as Online} from "./online/"
-import {view as Search} from "./search/"
+*/
+import {view as IndexPage} from './Index/'
 import {BackToTop} from "./screenup/screenup.js";
-
 
 
 import { Layout, Menu, Icon } from 'antd';
@@ -13,7 +13,8 @@ const SubMenu = Menu.SubMenu;
 
 class Container extends React.Component {
     constructor(props,context){
-        super(props,context)
+        super(props,context);
+        this.onCollapse = this.onCollapse.bind(this)
 }
     state = {
         collapsed: false,
@@ -63,7 +64,6 @@ class Container extends React.Component {
                 </Sider>
                 <Layout>
                     <Header style={{ background: '#fff', padding: 0 }}>
-                        <Search />
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
                         {/*<Breadcrumb style={{ margin: '16px 0' }}>
@@ -85,18 +85,34 @@ class Container extends React.Component {
 
 
 
-
+/*
 class Middle extends Component {
+    constructor(props)
+    {
+        super(props);
+        this.changePage = this.changePage.bind(this);
+        this.state={
+            "first":true,
+            "reload":false,
+        }
+    }
+    changePage = (b) => {
+        console.log(b);
+        this.setState({"first": false,"reload": b});
+    };
   render() {
+      console.log(this.state.reload);
+      this.page = <Page pageChange={this.changePage}/>;
+      this.mychild =(!this.state.reload) ?<Anime  reload = {this.state.reload} first={this.state.first}/>:<div className={"loading"}><Spin /></div>;
     return (
         <div>
         <Online />
-        <Anime />
-        <Page/>
+            {this.mychild}
+            {this.page}
         </div>
     );
   }
-}
+}*/
 
 
 class BilibiliHome extends Component {
@@ -104,7 +120,7 @@ class BilibiliHome extends Component {
         return (
             <div>
                 <Container>
-                    <Middle/>
+                    <IndexPage/>
                     </Container>
                 <BackToTop/>
             </div>

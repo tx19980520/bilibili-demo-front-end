@@ -1,7 +1,5 @@
 import React ,{Component}from "react"
-import {connect} from "react-redux"
 import { Icon, Button, Input, AutoComplete } from 'antd';
-import {searchInit,searchWord} from "./action.js"
 import {Row,Col} from "react-flexbox-grid"
 import "./search.css"
 
@@ -12,7 +10,7 @@ class Complete extends Component {
     {
         super(context,props);
         this.clickSearchButton = this.clickSearchButton.bind(this);
-        this.searchChange = this.searchChange.bind(this);
+        //this.searchChange = this.searchChange.bind(this);
         this.state={
             value:""
         }
@@ -27,11 +25,10 @@ class Complete extends Component {
         }
 
     };
-    searchChange(value){
-        console.log("change")
+    /*searchChange(value){
         this.setState({value:value});
         this.props.refreshSearch(this.state.value);
-    };
+    };*/
     render(){
         return (
             <Row>
@@ -42,7 +39,7 @@ class Complete extends Component {
                                 className="global-search"
                                 size="large"
                                 style={{ width: '100%' }}
-                                onChange={this.searchChange}
+                                onChange={this.props.searchChange}
                                 dataSource={this.props.searchList}
                                 placeholder="请输入你想输入搜索的内容"
                                 filterOption={false/*{(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}*/}
@@ -63,17 +60,4 @@ class Complete extends Component {
         );}
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        refreshSearch:(word)=>{
-            dispatch(searchInit(word))
-        },
-        search:(word)=>{
-            dispatch(searchWord(word))
-        }
-    }
-};
-const mapStateToProps = (state) =>{
-    return {searchList:state.search.list}
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Complete);
+export default Complete;

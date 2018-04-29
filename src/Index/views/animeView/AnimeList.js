@@ -1,8 +1,6 @@
 import React,{Component} from "react"
 import {connect} from 'react-redux';
 import {AnimeItem} from "./AnimeItem.js";
-import {AnimeLine} from "./AnimeLine.js";
-import {fetchAnime} from "../actions.js";
 import { StaggeredMotion, spring, presets } from 'react-motion'
 import "./animeItem.css"
 import {Row,Col} from "react-flexbox-grid"
@@ -11,6 +9,7 @@ class AnimeList extends Component {
         super(props,context);
         //我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
     };
+
     render(){
         /*var lineSlide = [];
         var currData = [];
@@ -28,7 +27,7 @@ class AnimeList extends Component {
                     currData = [];
                 }
             }
-        }*/let list = this.props.animes['list'];
+        }*/let list = this.props.list;
         if(list)
         {
             let boxes = [];
@@ -44,31 +43,28 @@ class AnimeList extends Component {
                             Motion defaultStyles={boxes}
                             styles={prevStyles => prevStyles.map((item, i) => {
                                 return i === 0
-                                    ? { scale: spring(1, presets.noWobble) }
+                                    ? { scale: spring(1, { ...presets.noWobble }) }
                                     : prevStyles[i - 1]
                             })}>
                             {interpolatingStyles =>
-                                <Row>
+                                <Row around="md">
                                     {interpolatingStyles.map((item, i) => {
                                         return (
-                                            <Col md={3}>
-                                            <AnimeItem
+                                            <Col md={3} key={i}>
+												<AnimeItem
                                                 key={i}
                                                 sessionid={list[i].animeId}
                                                 picture={list[i].animePicturePath}
                                                 fans={list[i].fans}
                                                 title={list[i].animeTitle}
                                                 animeFinished = {list.animeFinished}
-                                                style={{
-                                                    transform: `scale(${item.scale}, ${item.scale})`
-                                                }}
-                                            />
+												scale = {item.scale}
+												/>
                                             </Col>);
                                     })}
                                 </Row>
                             }
                         </StaggeredMotion>
-
                     }
                 </ul>
             )
@@ -76,19 +72,8 @@ class AnimeList extends Component {
             return null;
         }
     };
-    componentDidMount() {
-        this.props.initAnimeData()
-    }
+
+
 }
-const mapStateToProps=(state)=>
-{
-    return {animes:state.animes}
-};
-const mapDispatchToProps=(dispatch)=>{
-    return {
-        initAnimeData: () => {
-            dispatch(fetchAnime());
-        }
-    }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(AnimeList);
+
+export default AnimeList;

@@ -1,16 +1,15 @@
-import {SEARCH_FETCH_FIALURE,SEARCH_FETCH_START,SEARCH_FETCH_SUCESS} from "./actionType.js";
-import {SEARCH_WORD_FAILURE,SEARCH_WORD_START} from "./actionType";
-import {actions as animeActions} from "../anime/";
-import {actions as pageActions} from "../page/";
+import {SEARCH_WORD_FAILURE,SEARCH_WORD_START,SEARCH_FETCH_FIALURE,SEARCH_FETCH_START,SEARCH_FETCH_SUCCESS} from "./actionType.js";
+import {} from "./actionType";
+import {actions as animeActions} from "../Index/";
 let fetchAnimeSucess = animeActions.fetchAnimeSucess
-let fetchPageSucess = pageActions.fetchPageSucess;
+let fetchPageSucess = animeActions.fetchPageSucess;
 const searchInitStart=()=>(
             {
                 type:SEARCH_FETCH_START
             });
 const searchInitSucess=(result)=>(
     {
-        type: SEARCH_FETCH_SUCESS,
+        type: SEARCH_FETCH_SUCCESS,
         result
     });
 const searchInitFailure=(err)=>(

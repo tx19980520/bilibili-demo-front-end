@@ -1,27 +1,47 @@
-import React,{Component} from 'react';
-import {Component} from "react";
+import React from 'react';
 import { Media } from 'reactstrap';
-import {connect} from "react-redux";
-
-class AnimeMedia extends Component {
+import { Tag } from 'antd';
+import "./animeMedia.css"
+class AnimeMedia extends React.Component {
     constructor(props,context)
     {
         super(props,context);
     }
     render()
     {
+        let tags = (this.props.data.specific.tags)?this.props.data.specific.tags:[];
+		let rating = (this.props.data.specific.rating)?this.props.data.specific.rating:"1000";
+		let coins = (this.props.data.specific.coins)?this.props.data.specific.coins:"0";
+        let cover = `/${this.props.data.cover}`;
+        let actors = this.props.data.specific.actor;
         return (
             <Media>
                 <Media left href="#">
-                    <Media object data-src="holder.js/64x64" alt="Generic placeholder image"/>
+                    <Media object src={cover} alt="cover" className={"media-img"}/>
                 </Media>
                 <Media body>
                     <Media heading>
-                        Media heading
+					<div className={"media-heading"}>
+						{this.props.data.animeTitle}
+					</div>
+                        {tags.map((tag,i)=>{
+                            return (<Tag key={i} color="blue">{tag}</Tag>)
+                        })
+                        }
+					<div className="actors">
+					{actors.map((actor,i)=>{
+                        return(` ${actor.role}:${actor.actor} `)
+                    })}
+					</div>
                     </Media>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
-                    Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi
-                    vulputate fringilla. Donec lacinia congue felis in faucibus.
+					<div className={"evaluate"}>
+                        {this.props.data.specific.evaluate}
+					</div>
+					<div className={"media-rating"}>
+						{rating[0].score}
+						<br />
+						{coins}
+					</div>
                 </Media>
             </Media>
         );
