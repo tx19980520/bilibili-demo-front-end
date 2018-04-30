@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Jumbotron, Button } from 'reactstrap';
+import { Jumbotron } from 'reactstrap';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import AnimeMedia from "./jumbtron.js";
@@ -11,30 +11,21 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import Icon from 'antd/lib/icon';
 import "./bugumiList.css"
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
-  gridList: {
-    display: 'flex',
-    flexWrap: 'nowrap',
-    overflowX: 'auto',
-  },
-  titleStyle: {
-    color: 'rgb(0, 188, 212)',
-  },
-};
+
 class Episode extends Component
 {
     constructor(props,context)
     {
         super(props,context);
+        this.bugumiLoad = this.bugumiLoad.bind(this);
         this.state = {
             picOpen: {},
         };
     }
+    bugumiLoad = (e) =>
+    {
+        e.target.style.visibility = "";
+    };
     onImgClick = (e, i) => {
         const { picOpen } = this.state;
         Object.keys(picOpen).forEach((key) => {
@@ -95,7 +86,7 @@ class Episode extends Component
         return dataArray.map((item, i) => {
             const content =item.index_title;
             const title = `第${item.index}`;
-            const image = 'https://zos.alipayobjects.com/rmsportal/DGOtoWASeguMJgV.png';
+            const image = '/full/00a99023475d8e885b63dc46d7881ea31c281d2e.jpg';
             const isEnter = typeof this.state.picOpen[i] === 'boolean';
             const isOpen = this.state.picOpen[i];
             const left = isEnter ? 0 : imgBoxWidth * (i % linenum);
@@ -149,10 +140,12 @@ class Episode extends Component
                         style={{
                             left: imgLeft,
                             top: imgTop,
+                            height:imgHeight,
+                            width:imgWidth
                         }}
                         animation={aAnimation}
                     >
-                        <img src={image} width="100%" height="100%" />
+                        <img src={image} alt="bugumi pic" onLoad={this.bugumiLoad}  width="100%" height="100%" />
                     </TweenOne>
                     <TweenOneGroup
                         enter={[
@@ -194,8 +187,7 @@ class Episode extends Component
                              height:hei
                     }}>
                     <QueueAnim type="bottom" className={`${this.props.classname}-title`}>
-                        <h1 key="h1">Motion Design</h1>
-                        <p key="p">The react animation solution</p>
+                        <h1 key="h1">番剧列表</h1>
                     </QueueAnim>
                     <div className={"anime-wrap"}>
                         <QueueAnim
@@ -274,7 +266,9 @@ class DashBoard extends Component{
 						data={this.props.specific.result}
 					/>
                     <div className="lead">
+                        <div className={"lead-button"}>
                         <RaisedButton label="投票" primary={true}  onClick={this.handleDialogOpen} />
+                        </div>
                         {/*这个也要用redux让我觉得很难受*/}
                         <Dialog
                             title="Dialog With Date Picker"

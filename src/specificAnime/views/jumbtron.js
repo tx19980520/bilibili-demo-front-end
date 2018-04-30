@@ -1,14 +1,20 @@
 import React from 'react';
 import { Media } from 'reactstrap';
 import { Tag } from 'antd';
+import Chip from 'material-ui/Chip';
 import "./animeMedia.css"
 class AnimeMedia extends React.Component {
-    constructor(props,context)
+   /* constructor(props,context)
     {
         super(props,context);
     }
+    */
     render()
     {
+        const wrapper= {
+            display: 'flex',
+            flexWrap: 'wrap',
+        };
         let tags = (this.props.data.specific.tags)?this.props.data.specific.tags:[];
 		let rating = (this.props.data.specific.rating)?this.props.data.specific.rating:"1000";
 		let coins = (this.props.data.specific.coins)?this.props.data.specific.coins:"0";
@@ -28,9 +34,10 @@ class AnimeMedia extends React.Component {
                             return (<Tag key={i} color="blue">{tag}</Tag>)
                         })
                         }
-					<div className="actors">
+					<div className={"actors"} style={wrapper}>
 					{actors.map((actor,i)=>{
-                        return(` ${actor.role}:${actor.actor} `)
+					    if(actor.actor !== "...")
+                            return( <Chip style={{margin:4+"px"}} key={i}>{actor.role}:{actor.actor} </Chip>)
                     })}
 					</div>
                     </Media>

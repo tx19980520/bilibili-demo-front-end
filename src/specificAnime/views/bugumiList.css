@@ -2,7 +2,16 @@
 .anime-wrap{
     width:100%;
 }
-
+.fade-status{
+    visibility:hidden;
+}
+.lead{
+    width:240px;
+}
+.lead-button{
+    margin: 25px 60px;
+}
+/*add end*/
 /* 外壳样式 */
 .pic-details-demo-wrapper {
     position: relative;

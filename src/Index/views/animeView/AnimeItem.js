@@ -30,9 +30,9 @@ render(){//pictrue是封面的链接，fans是追番人数
         )
     }*/
 	
-    var fansnum = "追番人数:"+this.props.fans;
-    var status = (this.props.animeFinished === 1)?"未完结":"已完结";
-    let path = `/spec/${this.props.sessionid}`
+    let fansnum = "追番人数:"+this.props.fans;
+    let status = (this.props.animeFinished === 1)?"未完结":"已完结";
+    let path = `/spec/${this.props.sessionid}`;
     return (
         <div className={"item-margin"}>
             <Card

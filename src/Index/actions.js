@@ -1,6 +1,14 @@
-import {ANIME_FETCH_FAILURE,ANIME_FETCH_START,ANIME_FETCH_SUCCESS} from "./actionType";//anime
+import {ANIME_FETCH_FAILURE,ANIME_FETCH_START,ANIME_FETCH_SUCCESS} from "./actionType";// anime
 import {GET_TOTAL_PAGE,GET_PAGE_SUCCESS,GET_PAGE_FAILURE} from "./actionType.js";//page
 import {SEARCH_WORD_FAILURE,SEARCH_WORD_START,SEARCH_WORD_SUCCESS} from "./actionType.js";
+/*ajax*/
+let ajaxId = 0;
+const dispatchIfValid=(action,dispatch,seqId)=>{
+    if(ajaxId === seqId)
+    {
+        return dispatch(action);
+    }
+};
 //search
 export const fetchAnimeStart=()=>({
     type:ANIME_FETCH_START
@@ -17,8 +25,8 @@ export const  fetchAnimeFailure=(error)=>({
 export const fetchAnime = () => {
     return (dispatch) => {
         const apiUrl = `/api/getAnime`;
-
-        dispatch(fetchAnimeStart());
+        let getId = ++ ajaxId;
+        dispatchIfValid(fetchAnimeStart(),dispatch,getId);
 
         return fetch(apiUrl).then((response) => {
             if (response.status !== 200 && response.status !== 304) {
@@ -26,20 +34,20 @@ export const fetchAnime = () => {
             }
 
             response.json().then((responseJson) => {
-                dispatch(fetchAnimeSucess(responseJson));
+                dispatchIfValid(fetchAnimeSucess(responseJson),dispatch,getId);
             }).catch((error) => {
-                dispatch(fetchAnimeFailure(error));
+                dispatchIfValid(fetchAnimeFailure(error),dispatch,getId);
             });
         }).catch((error) => {
-            dispatch(fetchAnimeFailure(error));
+            dispatchIfValid(fetchAnimeFailure(error),dispatch,getId);
         })
     };
 };
 export const fetchAnimebyPage = (page) => {
     return (dispatch) => {
-        const apiUrl = `/api/getAnime?`+`page=`+page;
-        console.log(apiUrl);
-        dispatch(fetchAnimeStart());
+        const apiUrl = `/api/getAnime?`+`page=${page}`;
+        let pageId = ++ ajaxId;
+        dispatchIfValid(fetchAnimeStart(),dispatch,pageId);
 
         return fetch(apiUrl).then((response) => {
             if (response.status !== 200 && response.status !== 304) {
@@ -47,12 +55,12 @@ export const fetchAnimebyPage = (page) => {
             }
 
             response.json().then((responseJson) => {
-                dispatch(fetchAnimeSucess(responseJson));
+                dispatchIfValid(fetchAnimeSucess(responseJson),dispatch,pageId);
             }).catch((error) => {
-                dispatch(fetchAnimeFailure(error));
+                dispatchIfValid(fetchAnimeFailure(error),dispatch,pageId);
             });
         }).catch((error) => {
-            dispatch(fetchAnimeFailure(error));
+            dispatchIfValid(fetchAnimeFailure(error),dispatch,pageId);
         })
     };
 };
@@ -139,26 +147,20 @@ const searchWordSuccess=(result)=>({
     type:SEARCH_WORD_SUCCESS,
     result
 });
-let searchId = 0;
 export const searchWord=(word,page=1)=>{
     return (dispatch)=>{
         let containerUrl = `/api/getSearchList?word=${word}&page=${page}`;
-        const seqId = ++ searchId;
-        const dispatchIfValid=(action)=>{
-            if(searchId === seqId)
-            {
-                return dispatch(action);
-            }
-        };
-        dispatchIfValid(searchWordStart());
+        const seqId = ++ ajaxId;
+
+        dispatchIfValid(searchWordStart(),dispatch,seqId);
         fetch(containerUrl).then((response)=>{
             response.json().then((responseJson)=>{
-                dispatchIfValid(searchWordSuccess(responseJson))
+                dispatchIfValid(searchWordSuccess(responseJson),dispatch,seqId)
             }).catch((err)=>{
-                dispatchIfValid(searchWordFailure(err))
+                dispatchIfValid(searchWordFailure(err),dispatch,seqId)
             });
         }).catch((err)=>{
-            dispatchIfValid(searchWordFailure(err))
+            dispatchIfValid(searchWordFailure(err),dispatch,seqId)
         });
     }
 };

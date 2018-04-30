@@ -25,9 +25,15 @@ class IndexPage extends Component {
         this.props.onPageChange(page)
     };
     wordPageChange = (word) =>{
-        console.log("nowword",word);
         this.setState({"nowword":word});
-        this.props.wordChange(word);
+        if(word === "")
+        {
+            this.props.initAnimeData();
+            this.props.initPage();
+        }
+        else{
+            this.props.wordChange(word);
+        }
     };
     render() {
         console.log("searchstart",this.props.index.searchstart);

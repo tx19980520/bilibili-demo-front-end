@@ -6,7 +6,6 @@ import thunkMiddleware from 'redux-thunk'
 //import {reducer as pageReducer} from './page/';
 import {reducer as indexReducer} from "./Index/";
 import {reducer as onlineReducer} from "./online/";
-import {reducer as searchReducer} from "./search/";
 import {reducer as specReducer} from "./specificAnime/";
 
 const reducer = combineReducers({
@@ -14,7 +13,6 @@ const reducer = combineReducers({
     page: pageReducer,*/
     index: indexReducer,
     online: onlineReducer,
-    search: searchReducer,
     specific: specReducer
 });
 

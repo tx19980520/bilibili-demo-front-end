@@ -1,14 +1,15 @@
 import React,{Component} from "react"
-import {connect} from 'react-redux';
 import {AnimeItem} from "./AnimeItem.js";
 import { StaggeredMotion, spring, presets } from 'react-motion'
 import "./animeItem.css"
 import {Row,Col} from "react-flexbox-grid"
 class AnimeList extends Component {
+    /*
     constructor(props,context){
         super(props,context);
         //我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
     };
+    */
 
     render(){
         /*var lineSlide = [];
