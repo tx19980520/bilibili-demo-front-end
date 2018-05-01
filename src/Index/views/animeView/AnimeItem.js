@@ -7,11 +7,11 @@ const { Meta } = Card;
 export class AnimeItem extends Component{
     constructor(props,context){
         super(props,context);
-        this.state = { imageStatus: "img-responsive" };
         this.handleImageLoad = this.handleImageLoad.bind(this);
     };
     handleImageLoad(){
-        this.setState({imageStatus:"img-responsive show-card"})
+        console.log("我准备好了", this.props.pos);
+        this.props.onLoadControl(this.props.pos);
     }
 render(){//pictrue是封面的链接，fans是追番人数
     /*if(this.state.imageStatus == "img-responsive")
@@ -38,11 +38,10 @@ render(){//pictrue是封面的链接，fans是追番人数
             <Card
             style={{
             transform: `scale(${this.props.scale}, ${this.props.scale})`}}
-                cover={<img alt="example" onLoad={this.handleImageLoad} src={this.props.picture} className={"img-responsive"} />}
+                cover={<img alt="example" onLoad={this.handleImageLoad} src={this.props.picture} className={'img-responsive'} />}
                 actions={[<NavLink to={path} onClick={(e)=>{window.scrollTo(0,0);}}><Icon type="setting" /></NavLink>, <Icon type="edit" />, <Icon type="ellipsis" />]}
             >
                 <Meta
-                    avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
                     title={this.props.title}
                     description= {<div><p>{fansnum}</p><p>是否完结：{status}</p></div>}
                 />

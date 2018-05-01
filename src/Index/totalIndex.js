@@ -13,9 +13,13 @@ class IndexPage extends Component {
         super(props);
         this.changePage = this.changePage.bind(this);
         this.wordPageChange = this.wordPageChange.bind(this);
+        this.onLoadSystem = this.onLoadSystem.bind(this);
         this.state = {
           "nowword":""
         };
+    }
+    onLoadSystem(pos) {
+        this.props.changeLoad(pos);// 在reducer 那一层去控制总开关
     }
     componentDidMount(){
         this.props.initPage();
@@ -36,11 +40,9 @@ class IndexPage extends Component {
         }
     };
     render() {
-        console.log("searchstart",this.props.index.searchstart);
-        console.log("pagessearch",this.props.index.pagesearch);
-        console.log("now,word",this.state.word);
+
         this.page = (this.props.index.pagesearch)?<Page word={this.state.nowword} pageChange={this.props.wordChange} totalPage={this.props.index.page}/>:<Page pageChange={this.changePage} totalPage={this.props.index.page}/>;
-        this.animes =(!this.props.index.reload ) ?<AnimeList list={this.props.index.animeslist}/>:<div className={"loading"}><Spin /></div>;
+        this.animes =(!this.props.index.reload ) ?<AnimeList allright={this.props.index.allright} onLoadSystem={this.props.changeLoad} list={this.props.index.animeslist}/>:<div className={"loading"}><Spin /></div>;
         return (
             <div>
                 <Online />
@@ -67,6 +69,9 @@ const mapDispatchToProps = (dispatch) => {
         wordChange: (word,page=1)=> {
             dispatch(actions.searchWord(word,page));
         },
+        changeLoad: (pos)=> {
+            dispatch(actions.LoadChange(pos));
+        }
     }
 };
 const mapStateToProps = (state) =>{

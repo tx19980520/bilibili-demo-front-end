@@ -258,12 +258,14 @@ class DashBoard extends Component{
                 onClick={this.handleNestedDialogClose}
             />
         ];
+        console.log(this.props.specific);
         return (
             <div>
                 <Jumbotron>
                     {/*这个地方放我们的Media*/}
                     <AnimeMedia
 						data={this.props.specific.result}
+                        allright={this.props.specific.all_ready}
 					/>
                     <div className="lead">
                         <div className={"lead-button"}>

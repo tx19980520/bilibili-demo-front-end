@@ -1,7 +1,12 @@
 import {ANIME_FETCH_FAILURE,ANIME_FETCH_START,ANIME_FETCH_SUCCESS} from "./actionType";// anime
 import {GET_TOTAL_PAGE,GET_PAGE_SUCCESS,GET_PAGE_FAILURE} from "./actionType.js";//page
 import {SEARCH_WORD_FAILURE,SEARCH_WORD_START,SEARCH_WORD_SUCCESS} from "./actionType.js";
+import {LOAD_CHANGE} from "./actionType.js";
 /*ajax*/
+export const LoadChange = (pos) =>({
+    type:LOAD_CHANGE,
+    pos:pos
+});
 let ajaxId = 0;
 const dispatchIfValid=(action,dispatch,seqId)=>{
     if(ajaxId === seqId)
@@ -10,14 +15,14 @@ const dispatchIfValid=(action,dispatch,seqId)=>{
     }
 };
 //search
-export const fetchAnimeStart=()=>({
+ const fetchAnimeStart=()=>({
     type:ANIME_FETCH_START
 });
-export const fetchAnimeSucess=(result)=>({
+ const fetchAnimeSucess=(result)=>({
     type:ANIME_FETCH_SUCCESS,
     result
 });
-export const  fetchAnimeFailure=(error)=>({
+ const  fetchAnimeFailure=(error)=>({
     type:ANIME_FETCH_FAILURE,
     error
 });

@@ -4,12 +4,12 @@ import { StaggeredMotion, spring, presets } from 'react-motion'
 import "./animeItem.css"
 import {Row,Col} from "react-flexbox-grid"
 class AnimeList extends Component {
-    /*
+
     constructor(props,context){
         super(props,context);
-        //我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
+        // 我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
     };
-    */
+
 
     render(){
         /*var lineSlide = [];
@@ -29,14 +29,15 @@ class AnimeList extends Component {
                 }
             }
         }*/let list = this.props.list;
-        if(list)
+        let len = list.length;
+        let boxes = [];
+        for (let i = 0; i < len; i++) {
+            boxes.push({
+                scale: 0
+            })
+        }
+        if(this.props.allright && typeof list !== 'undefined')
         {
-            let boxes = [];
-            for (let i = 0, len = list.length; i < len; i++) {
-                boxes.push({
-                    scale: 0
-                })
-            }
             return(
                 <ul>
                     {
@@ -53,12 +54,14 @@ class AnimeList extends Component {
                                         return (
                                             <Col md={3} key={i}>
 												<AnimeItem
-                                                key={i}
+                                                pos={i}
                                                 sessionid={list[i].animeId}
                                                 picture={list[i].animePicturePath}
                                                 fans={list[i].fans}
                                                 title={list[i].animeTitle}
                                                 animeFinished = {list.animeFinished}
+                                                onLoadControl = {this.props.onLoadSystem}
+                                                allright={this.props.right}
 												scale = {item.scale}
 												/>
                                             </Col>);
@@ -70,9 +73,46 @@ class AnimeList extends Component {
                 </ul>
             )
         }else{
-            return null;
+            return(
+                <ul>
+                    <StaggeredMotion
+                        Motion defaultStyles={boxes}
+                        styles={prevStyles => prevStyles.map((item, i) => {
+                            return i === 0
+                                ? { scale: spring(1, { ...presets.noWobble }) }
+                                : prevStyles[i - 1]
+                        })}>
+                    {(interpolatingStyles) =>
+                        <Row around="md" className={"before-load"}>
+                        {interpolatingStyles.map((item, i) => {
+                            return (
+                                <Col md={3} key={i}>
+                                    <AnimeItem
+                                        key={i}
+                                        pos={i}
+                                        sessionid={list[i].animeId}
+                                        picture={list[i].animePicturePath}
+                                        fans={list[i].fans}
+                                        title={list[i].animeTitle}
+                                        animeFinished = {list.animeFinished}
+                                        onLoadControl = {this.props.onLoadSystem}
+                                        allright={this.props.right}
+                                        scale = {item.scale}
+                                    />
+                                </Col>);
+                        })}
+                    </Row>
+                    }
+                    </StaggeredMotion>
+                </ul>
+            )
         }
     };
+    shouldComponentUpdate(nextProps,nextStates)
+    {
+        return (nextProps.allright);
+    }
+
 
 
 }
