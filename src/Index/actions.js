@@ -126,8 +126,7 @@ const searchInitFailure=(err)=>(
     });
 export const searchInit=(word)=>{
     return (dispatch) => {
-        const apiUrl = `/api/getSearchList?word=`+word;//这个地方我们改成了使用动态的后台取数据
-        console.log("go");
+        const apiUrl = `/api/getSearchList?word=${word}`;//这个地方我们改成了使用动态的后台取数据
         dispatch(searchInitStart());
 
         return fetch(apiUrl).then((response) => {

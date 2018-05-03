@@ -17,14 +17,14 @@ class AnimeMedia extends React.Component {
             display: 'flex',
             flexWrap: 'wrap',
         };
-        console.log(this.props.allright);
         if (this.props.allright)
         {
-            let tags = (this.props.data.specific.tags)?this.props.data.specific.tags:[];
-            let rating = (this.props.data.specific.rating)?this.props.data.specific.rating:"1000";
-            let coins = (this.props.data.specific.coins)?this.props.data.specific.coins:"0";
-            let cover = `/${this.props.data.cover}`;
-            let actors = this.props.data.specific.actor;
+            let data =  this.props.data
+            let tags = (data.specific.tags)?data.specific.tags:[];
+            let rating = (data.specific.rating)?data.specific.rating:"1000";
+            let coins = (data.specific.coins)?data.specific.coins:"0";
+            let cover = `/${data.cover}`;
+            let actors = data.specific.actor;
 
             return (
                 <Media>
@@ -35,7 +35,7 @@ class AnimeMedia extends React.Component {
                         <Media body>
                             <Media heading>
                                 <div key="two" className={"media-heading"}>
-                                    {this.props.data.animeTitle}
+                                    {data.animeTitle}
                                 </div>
                                 {tags.map((tag,i)=>{
                                     return (<Tag key={i} color="blue">{tag}</Tag>)
@@ -49,7 +49,7 @@ class AnimeMedia extends React.Component {
                                 </div>
                             </Media>
                             <div key="four" className={"evaluate"}>
-                                {this.props.data.specific.evaluate}
+                                {data.specific.evaluate}
                             </div>
                             <div key="five" className={"media-rating"}>
                                 {rating[0].score}

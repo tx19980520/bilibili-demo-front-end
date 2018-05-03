@@ -3,8 +3,9 @@ import React,{Component} from 'react';
 import {view as Anime} from "./anime/"
 import {view as Online} from "./online/"
 */
+import {view as Recommend} from './recommendForm/'
 import {view as IndexPage} from './Index/'
-import {BackToTop} from "./screenup/screenup.js";
+import {BackToTop} from "./screenup/screenup.js"
 
 
 import { Layout, Menu, Icon } from 'antd';
@@ -14,15 +15,30 @@ const SubMenu = Menu.SubMenu;
 class Container extends React.Component {
     constructor(props,context){
         super(props,context);
-        this.onCollapse = this.onCollapse.bind(this)
+        this.onCollapse = this.onCollapse.bind(this);
+        this.HomePage = this.HomePage.bind(this);
+        this.Recommend = this.Recommend.bind(this);
+        this.state = {
+            choose:0,
+            collapsed: false,
+        };
 }
-    state = {
-        collapsed: false,
-    };
+    HomePage() {
+        this.setState({choose:0});
+    }
+    Recommend() {
+        this.setState({choose:1});
+    }
     onCollapse(collapsed){
         console.log(collapsed);
         this.setState({ collapsed });
     }
+    /*
+    shouldComponentUpdate(nextProps,nextStates)
+    {
+        return(this.state === nextStates)
+    }
+    */
     render() {
         return (
             <Layout style={{ minHeight: '100vh' }}>
@@ -33,13 +49,17 @@ class Container extends React.Component {
                 >
                     <div className="logo" />
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                        <Menu.Item key="1">
-                            <Icon type="pie-chart" />
-                            <span>Option 1</span>
+                        <Menu.Item key="1" >
+                            <div onClick={this.HomePage}>
+                                <Icon type="pie-chart" />
+                                <span>HomePage</span>
+                            </div>
                         </Menu.Item>
-                        <Menu.Item key="2">
-                            <Icon type="desktop" />
-                            <span>Option 2</span>
+                        <Menu.Item key="2" >
+                            <div onClick={this.Recommend}>
+                                <Icon type="desktop" />
+                                <span>Recommend</span>
+                            </div>
                         </Menu.Item>
                         <SubMenu
                             key="sub1"
@@ -71,7 +91,7 @@ class Container extends React.Component {
                             <Breadcrumb.Item>Bill</Breadcrumb.Item>
                         </Breadcrumb>*/}
                         <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-                            {this.props.children}
+                            {this.props.children[this.state.choose]}
                         </div>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
@@ -121,6 +141,7 @@ class BilibiliHome extends Component {
             <div>
                 <Container>
                     <IndexPage/>
+                    <Recommend />
                     </Container>
                 <BackToTop/>
             </div>

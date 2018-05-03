@@ -10,7 +10,6 @@ export class AnimeItem extends Component{
         this.handleImageLoad = this.handleImageLoad.bind(this);
     };
     handleImageLoad(){
-        console.log("我准备好了", this.props.pos);
         this.props.onLoadControl(this.props.pos);
     }
 render(){//pictrue是封面的链接，fans是追番人数

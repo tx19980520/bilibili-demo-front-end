@@ -1,9 +1,30 @@
 import React, {Component}from 'react'
-import { Form, Input, Icon, Button } from 'antd';
-import './recommand.css'
+import { Form, AutoComplete, Icon, Input, Button } from 'antd';
+import {connect} from 'react-redux'
+import *as actions from "./actions.js"
+import './recommend.css'
+import Complete from '../Index/views/autocomplete.js'
 const FormItem = Form.Item;
+const AutoOption = AutoComplete.Option;
 let uuid = 0;
 class DynamicFieldSet extends Component {
+    constructor(props,context)
+    {
+        super(props,context);
+        this.state={
+            test:[]
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.autoChange = this.autoChange.bind(this);
+    }
+    test = ()=>{
+        fetch('/api/getAnime').then(response =>{
+            response.json().then(
+            (rjs) => {this.setState({test:rjs})
+            })
+        })
+    }
+
     remove = (k) => {
         const { form } = this.props;
         // can use data-binding to get
@@ -32,16 +53,26 @@ class DynamicFieldSet extends Component {
         });
     }
 
+    autoChange = (value) =>{
+        if(value !== "")
+            this.props.getAnimeList(value)
+        else{
+            this.props.Optionmemset();
+        }
+    }
+
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                this.props.submitData(values.names)
             }
         });
     }
 
     render() {
+        this.test();
+        console.log(this.state.test);
         const { getFieldDecorator, getFieldValue } = this.props.form;
         const formItemLayout = {
             labelCol: {
@@ -59,13 +90,18 @@ class DynamicFieldSet extends Component {
                 sm: { span: 20, offset: 4 },
             },
         };
+        console.log(this.props.recommend)
+        const Options = this.props.recommend.animelist.map((anime,i)=>{
+            return(<AutoOption key={i}>{anime}</AutoOption>)
+        })
+
         getFieldDecorator('keys', { initialValue: [] });
         const keys = getFieldValue('keys');
         const formItems = keys.map((k, index) => {
             return (
                 <FormItem
                     {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-                    label={index === 0 ? 'Passengers' : ''}
+                    label={index === 0 ? '番剧' : ''}
                     required={false}
                     key={k}
                 >
@@ -74,10 +110,17 @@ class DynamicFieldSet extends Component {
                         rules: [{
                             required: true,
                             whitespace: true,
-                            message: "Please input passenger's name or delete this field.",
+                            message: "请输入一个正确的番剧名称",
+
                         }],
                     })(
-                        <Input placeholder="passenger name" style={{ width: '60%', marginRight: 8 }} />
+                        <AutoComplete
+                            onChange={this.autoChange}
+                            dataSource={Options}
+                            placeholder="autocomplete"
+                            style={{ width: '60%', marginRight: 8 }} >
+                            <Input />
+                        </AutoComplete>
                     )}
                     {keys.length > 1 ? (
                         <Icon
@@ -105,5 +148,22 @@ class DynamicFieldSet extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {recommend:state.recommend}
+};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getAnimeList:(word)=>{
+            dispatch(actions.FetchAnimeList(word));
+        },
+        submitData: (data)=>{
+            dispatch(actions.SubmitRecommend(data))
+        },
+        Optionmemset:()=>{
+            dispatch(actions.FetchAnimeStart())
+        }
+    }
+}
 
-export default WrappedDynamicFieldSet = Form.create()(DynamicFieldSet);
+let WrappedDynamicFieldSet = Form.create()(connect(mapStateToProps, mapDispatchToProps)(DynamicFieldSet));
+export default WrappedDynamicFieldSet;
