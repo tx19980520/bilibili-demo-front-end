@@ -265,7 +265,7 @@ class DashBoard extends Component{
                     {/*这个地方放我们的Media*/}
                     <AnimeMedia
 						data={this.props.specific.result}
-                        allright={this.props.specific.all_ready}
+                        allright={this.props.specific.allready}
 					/>
                     <div className="lead">
                         <div className={"lead-button"}>

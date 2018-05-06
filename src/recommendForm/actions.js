@@ -1,22 +1,22 @@
-import {RECOMMEND_START,RECOMMEND_FAILURE,RECOMMEND_SUCCESS} from './actionType.js'
-import {FETCH_ANIMES_SUCCESS,FETCH_ANIMES_START,FETCH_ANIMES_FAILURE} from "./actionType"
-const RecommendStart = () =>({
+import {RECOMMEND_START, RECOMMEND_FAILURE, RECOMMEND_SUCCESS} from './actionType.js'
+import {FETCH_ANIMES_SUCCESS, FETCH_ANIMES_START, FETCH_ANIMES_FAILURE} from "./actionType"
+const recommendStart = () => ({
     type:RECOMMEND_START
 })
 
-const RecommendSuccess = (data) =>({
+const recommendSuccess = (data) => ({
     type:RECOMMEND_SUCCESS,
     data
 })
-const RecommendFailure = (error) =>({
+const recommendFailure = (error) => ({
     type:RECOMMEND_FAILURE,
     error
 })
-export const SubmitRecommend = (animelist) =>{
+export const submitRecommend = (animelist) => {
     return (dispatch) => {
         const apiUrl = `/api/getOnlineData`;
 
-        dispatch(RecommendStart());
+        dispatch(recommendStart());
         let options={
             body:animelist,
             headers:{
@@ -28,43 +28,43 @@ export const SubmitRecommend = (animelist) =>{
 
             response.json().then((responseJson) => {
                 console.log(responseJson);
-                dispatch(RecommendSuccess(responseJson));
+                dispatch(recommendSuccess(responseJson));
             }).catch((error) => {
-                dispatch(RecommendFailure(error));
+                dispatch(recommendFailure(error));
             });
         }).catch((error) => {
-            dispatch(RecommendFailure(error));
+            dispatch(recommendFailure(error));
         })
     };
 }
 
-export const FetchAnimeStart = () =>({
+export const fetchAnimeStart = () => ({
     type:FETCH_ANIMES_START
 })
 
 
-const FetchAnimeSuccess = (data) =>({
+const fetchAnimeSuccess = (data) => ({
     type:FETCH_ANIMES_SUCCESS,
     data
 })
 
-const FetchAnimeFailure = (error) =>({
+const fetchAnimeFailure = (error) => ({
     type:FETCH_ANIMES_FAILURE,
     error
 })
 
-export const FetchAnimeList = (word) => {
+export const fetchAnimeList = (word) => {
     return (dispatch) =>{
-        dispatch(FetchAnimeStart());
+        dispatch(fetchAnimeStart());
         const apiUrl = `/api/getSearchList?word=${word}`;
         return fetch(apiUrl).then((response)=>{
             response.json().then((responseJson)=>{
-                dispatch(FetchAnimeSuccess(responseJson))
+                dispatch(fetchAnimeSuccess(responseJson))
             }).catch((error) => {
-                dispatch(FetchAnimeFailure(error));
+                dispatch(fetchAnimeFailure(error));
             })
         }).catch((error) => {
-            dispatch(FetchAnimeFailure(error));
+            dispatch(fetchAnimeFailure(error));
         })
     }
 }

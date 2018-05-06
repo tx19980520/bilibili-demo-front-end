@@ -35,7 +35,7 @@ class OnlineChart extends Component{
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        initOnline:()=>{
+        initOnline: () => {
             dispatch(onlineInit())
         }
     }

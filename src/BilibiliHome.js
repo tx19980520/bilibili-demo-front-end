@@ -105,39 +105,9 @@ class Container extends React.Component {
 
 
 
-/*
-class Middle extends Component {
-    constructor(props)
-    {
-        super(props);
-        this.changePage = this.changePage.bind(this);
-        this.state={
-            "first":true,
-            "reload":false,
-        }
-    }
-    changePage = (b) => {
-        console.log(b);
-        this.setState({"first": false,"reload": b});
-    };
-  render() {
-      console.log(this.state.reload);
-      this.page = <Page pageChange={this.changePage}/>;
-      this.mychild =(!this.state.reload) ?<Anime  reload = {this.state.reload} first={this.state.first}/>:<div className={"loading"}><Spin /></div>;
-    return (
-        <div>
-        <Online />
-            {this.mychild}
-            {this.page}
-        </div>
-    );
-  }
-}*/
 
 
-class BilibiliHome extends Component {
-    render() {//###########到这里下面的东西可以开始改了########################
-        return (
+export const BilibiliHome = () =>(
             <div>
                 <Container>
                     <IndexPage/>
@@ -145,8 +115,5 @@ class BilibiliHome extends Component {
                     </Container>
                 <BackToTop/>
             </div>
-        );
-    }
-}
+)
 
-export default BilibiliHome;

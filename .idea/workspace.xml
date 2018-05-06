@@ -8,19 +8,28 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/BilibiliHome.js" afterPath="$PROJECT_DIR$/src/BilibiliHome.js" />
       <change beforePath="$PROJECT_DIR$/src/BilibiliRouter.js" afterPath="$PROJECT_DIR$/src/BilibiliRouter.js" />
+      <change beforePath="$PROJECT_DIR$/src/BilibiliSearch.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/Index/actions.js" afterPath="$PROJECT_DIR$/src/Index/actions.js" />
+      <change beforePath="$PROJECT_DIR$/src/Index/index.js" afterPath="$PROJECT_DIR$/src/Index/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/Index/reducer.js" afterPath="$PROJECT_DIR$/src/Index/reducer.js" />
       <change beforePath="$PROJECT_DIR$/src/Index/totalIndex.js" afterPath="$PROJECT_DIR$/src/Index/totalIndex.js" />
       <change beforePath="$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js" afterPath="$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js" />
-      <change beforePath="$PROJECT_DIR$/src/Index/views/animeView/AnimeLine.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Index/views/animeView/animeLine.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/Store.js" afterPath="$PROJECT_DIR$/src/Store.js" />
-      <change beforePath="$PROJECT_DIR$/src/recommandForm/Recommand.js" afterPath="$PROJECT_DIR$/src/recommendForm/Recommend.js" />
-      <change beforePath="$PROJECT_DIR$/src/recommandForm/actionType.js" afterPath="$PROJECT_DIR$/src/recommendForm/actionType.js" />
-      <change beforePath="$PROJECT_DIR$/src/recommandForm/actions.js" afterPath="$PROJECT_DIR$/src/recommendForm/actions.js" />
-      <change beforePath="$PROJECT_DIR$/src/recommandForm/index.js" afterPath="$PROJECT_DIR$/src/recommendForm/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/recommandForm/recommand.css" afterPath="$PROJECT_DIR$/src/recommendForm/recommend.css" />
-      <change beforePath="$PROJECT_DIR$/src/recommandForm/reducer.js" afterPath="$PROJECT_DIR$/src/recommendForm/reducer.js" />
+      <change beforePath="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" afterPath="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" />
+      <change beforePath="$PROJECT_DIR$/src/Index/views/autocomplete.js" afterPath="$PROJECT_DIR$/src/Index/views/autocomplete.js" />
+      <change beforePath="$PROJECT_DIR$/src/Index/views/page.js" afterPath="$PROJECT_DIR$/src/Index/views/page.js" />
+      <change beforePath="$PROJECT_DIR$/src/online/actions.js" afterPath="$PROJECT_DIR$/src/online/actions.js" />
+      <change beforePath="$PROJECT_DIR$/src/online/index.js" afterPath="$PROJECT_DIR$/src/online/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/online/reducer.js" afterPath="$PROJECT_DIR$/src/online/reducer.js" />
+      <change beforePath="$PROJECT_DIR$/src/online/views/onlineChart.js" afterPath="$PROJECT_DIR$/src/online/views/onlineChart.js" />
+      <change beforePath="$PROJECT_DIR$/src/recommendForm/Recommend.js" afterPath="$PROJECT_DIR$/src/recommendForm/Recommend.js" />
+      <change beforePath="$PROJECT_DIR$/src/recommendForm/actions.js" afterPath="$PROJECT_DIR$/src/recommendForm/actions.js" />
+      <change beforePath="$PROJECT_DIR$/src/recommendForm/reducer.js" afterPath="$PROJECT_DIR$/src/recommendForm/reducer.js" />
+      <change beforePath="$PROJECT_DIR$/src/screenup/screenup.js" afterPath="$PROJECT_DIR$/src/screenup/screenup.js" />
+      <change beforePath="$PROJECT_DIR$/src/specificAnime/actions.js" afterPath="$PROJECT_DIR$/src/specificAnime/actions.js" />
+      <change beforePath="$PROJECT_DIR$/src/specificAnime/reducer.js" afterPath="$PROJECT_DIR$/src/specificAnime/reducer.js" />
+      <change beforePath="$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js" afterPath="$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js" />
       <change beforePath="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" afterPath="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" />
+      <change beforePath="$PROJECT_DIR$/src/specificAnime/views/specificAnime.js" afterPath="$PROJECT_DIR$/src/specificAnime/views/specificAnime.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,55 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/recommendForm/actions.js">
+      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/online/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recommend.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/recommendForm/Recommend.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1863">
-              <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="onlineChart.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/online/views/onlineChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocomplete.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/views/autocomplete.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1478">
-              <caret line="62" column="18" lean-forward="false" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/views/page.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="502">
+              <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -94,55 +59,93 @@
       <file leaf-file-name="jumbtron.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/specificAnime/views/jumbtron.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-362">
-              <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="1080">
+              <caret line="46" column="67" lean-forward="false" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="totalIndex.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.js">
+      <file leaf-file-name="animeDashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-167">
-              <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-875">
+              <caret line="270" column="47" lean-forward="true" selection-start-line="270" selection-start-column="47" selection-end-line="270" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnimeItem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js">
+      <file leaf-file-name="specificAnime.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/specificAnime/views/specificAnime.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/specificAnime/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="691">
+              <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/specificAnime/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actionType.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/specificAnime/actionType.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnimeList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="animeItem.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/animeItem.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/specificAnime/reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Index/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screenup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screenup/screenup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,14 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>co</find>
-      <find>wrap</find>
-      <find>contenc</find>
-      <find>text-wrapper</find>
-      <find>around</find>
-      <find>this.props.className</find>
-      <find>details-demo</find>
-      <find>Button</find>
       <find>margin-left:</find>
       <find>image</find>
       <find>animeM</find>
@@ -166,8 +161,6 @@
       <find>search</find>
       <find>SUCESS</find>
       <find>SEARCH_FETCH</find>
-      <find>animelist</find>
-      <find>animeslist</find>
       <find>fetchPage</find>
       <find>width</find>
       <find>img</find>
@@ -178,6 +171,19 @@
       <find>Pl</find>
       <find>this.props.index</find>
       <find>this.props.data</find>
+      <find>loadchan</find>
+      <find>if</find>
+      <find>Optionmemset</find>
+      <find>pageSearch</find>
+      <find>animeslist</find>
+      <find>searchlist</find>
+      <find>animecode</find>
+      <find>searchcode</find>
+      <find>loadcontroller</find>
+      <find>animelist</find>
+      <find>index.</find>
+      <find>connect(mapStateToProps, mapDispatchToProps)(DashBoard)</find>
+      <find>all_ready</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,31 +192,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/page/actions.js" />
-        <option value="$PROJECT_DIR$/src/online/actions.js" />
         <option value="$PROJECT_DIR$/src/anime/view/AnimeItem.js" />
         <option value="$PROJECT_DIR$/src/anime/view/animeItem.css" />
         <option value="$PROJECT_DIR$/src/specificAnime/index.js" />
         <option value="$PROJECT_DIR$/src/specificAnime/actionType.js" />
-        <option value="$PROJECT_DIR$/src/specificAnime/actions.js" />
         <option value="$PROJECT_DIR$/src/BilibiliHome.css" />
         <option value="$PROJECT_DIR$/src/anime/view/AnimeList.js" />
         <option value="$PROJECT_DIR$/src/anime/actions.js" />
         <option value="$PROJECT_DIR$/src/page/page.js" />
         <option value="$PROJECT_DIR$/src/page/reducer.js" />
-        <option value="$PROJECT_DIR$/src/Index/index.js" />
         <option value="$PROJECT_DIR$/src/Index/totalIndex.css" />
         <option value="$PROJECT_DIR$/src/NavLink/NavLink.js" />
         <option value="$PROJECT_DIR$/src/search/autocomplete.js" />
         <option value="$PROJECT_DIR$/src/search/actionType.js" />
         <option value="$PROJECT_DIR$/src/search/action.js" />
         <option value="$PROJECT_DIR$/src/search/reducer.js" />
-        <option value="$PROJECT_DIR$/src/Index/views/page.js" />
-        <option value="$PROJECT_DIR$/src/Index/views/autocomplete.js" />
         <option value="$PROJECT_DIR$/src/specificAnime/views/bugumiList.css" />
-        <option value="$PROJECT_DIR$/src/specificAnime/views/specificAnime.js" />
-        <option value="$PROJECT_DIR$/src/online/views/onlineChart.js" />
         <option value="$PROJECT_DIR$/src/recommandForm/index.js" />
         <option value="$PROJECT_DIR$/src/recommandForm/recommand.css" />
         <option value="$PROJECT_DIR$/src/recommandForm/Recommand.js" />
@@ -219,24 +216,33 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Index/actionType.js" />
         <option value="$PROJECT_DIR$/src/Index/views/animeView/animeItem.css" />
-        <option value="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" />
-        <option value="$PROJECT_DIR$/src/Index/reducer.js" />
         <option value="$PROJECT_DIR$/src/specificAnime/views/animeMedia.css" />
-        <option value="$PROJECT_DIR$/src/specificAnime/reducer.js" />
-        <option value="$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js" />
-        <option value="$PROJECT_DIR$/src/BilibiliRouter.js" />
-        <option value="$PROJECT_DIR$/src/online/index.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/index.js" />
-        <option value="$PROJECT_DIR$/src/BilibiliHome.js" />
         <option value="$PROJECT_DIR$/src/Store.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/actionType.js" />
+        <option value="$PROJECT_DIR$/src/online/views/onlineChart.js" />
         <option value="$PROJECT_DIR$/src/Index/actions.js" />
+        <option value="$PROJECT_DIR$/src/online/actions.js" />
+        <option value="$PROJECT_DIR$/src/online/reducer.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/actions.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/reducer.js" />
-        <option value="$PROJECT_DIR$/src/Index/totalIndex.js" />
+        <option value="$PROJECT_DIR$/src/BilibiliRouter.js" />
+        <option value="$PROJECT_DIR$/src/BilibiliHome.js" />
+        <option value="$PROJECT_DIR$/src/screenup/screenup.js" />
+        <option value="$PROJECT_DIR$/src/Index/views/page.js" />
+        <option value="$PROJECT_DIR$/src/Index/views/autocomplete.js" />
         <option value="$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js" />
-        <option value="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" />
+        <option value="$PROJECT_DIR$/src/Index/reducer.js" />
+        <option value="$PROJECT_DIR$/src/Index/totalIndex.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/reducer.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/Recommend.js" />
+        <option value="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" />
+        <option value="$PROJECT_DIR$/src/online/index.js" />
+        <option value="$PROJECT_DIR$/src/Index/index.js" />
+        <option value="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" />
+        <option value="$PROJECT_DIR$/src/specificAnime/views/specificAnime.js" />
+        <option value="$PROJECT_DIR$/src/specificAnime/actions.js" />
+        <option value="$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js" />
+        <option value="$PROJECT_DIR$/src/specificAnime/reducer.js" />
       </list>
     </option>
   </component>
@@ -382,6 +388,7 @@
       <workItem from="1525174412292" duration="13755000" />
       <workItem from="1525328787902" duration="13143000" />
       <workItem from="1525356250329" duration="6437000" />
+      <workItem from="1525585108651" duration="5587000" />
     </task>
     <task id="LOCAL-00001" summary="for nginx settings the new api uri">
       <created>1524025378481</created>
@@ -394,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182214000" />
+    <option name="totallyTimeSpent" value="187801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -412,11 +419,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2359491" sideWeight="0.4952153" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35885167" sideWeight="0.51060444" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3576555" sideWeight="0.51272535" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497349" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35885167" sideWeight="0.48939556" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3576555" sideWeight="0.48727465" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497349" sideWeight="0.5047847" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -425,7 +433,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -461,21 +468,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/anime/actions.js" />
-    <entry file="file://$PROJECT_DIR$/src/page/actions.js" />
-    <entry file="file://$PROJECT_DIR$/src/Index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/anime/view/AnimeList.js" />
     <entry file="file://$PROJECT_DIR$/src/NavLink/navlink.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -490,76 +487,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NavLink/NavLink.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/search/search.css" />
     <entry file="file://$PROJECT_DIR$/src/search/autocomplete.js" />
     <entry file="file://$PROJECT_DIR$/src/search/reducer.js" />
     <entry file="file://$PROJECT_DIR$/src/search/actionType.js" />
     <entry file="file://$PROJECT_DIR$/src/search/action.js" />
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/bugumiList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3089">
-          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/actionType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/specificAnime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="44" lean-forward="false" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/animeMedia.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -570,36 +507,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/recommend/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/online/actionType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/online/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="34" column="12" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="40" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/online/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="41" lean-forward="true" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/recommendForm/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -617,65 +525,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BilibiliSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BilibiliRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#66#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="e#1#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/recommendForm/recommend.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeLine.js" />
+    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/animeItem.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/animeLine.css" />
+    <entry file="file://$PROJECT_DIR$/src/Index/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BilibiliHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="60" column="16" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+        <state relative-caret-position="-1242">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
-            <element signature="e#161#211#0" expanded="false" />
+            <element signature="e#184#274#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js">
+    <entry file="file://$PROJECT_DIR$/src/NavLink/NavLink.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="325" column="81" lean-forward="false" selection-start-line="325" selection-start-column="26" selection-end-line="325" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="81">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -687,135 +568,273 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/online/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recommendForm/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/recommendForm/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="1836">
+          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#85#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
-          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeLine.js">
+    <entry file="file://$PROJECT_DIR$/src/BilibiliSearch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/animeItem.css">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="135">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js">
+    <entry file="file://$PROJECT_DIR$/src/Store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/animeLine.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="108">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js">
+    <entry file="file://$PROJECT_DIR$/src/BilibiliRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+        <state relative-caret-position="27">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BilibiliHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#161#211#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/jumbtron.js">
+    <entry file="file://$PROJECT_DIR$/src/online/views/onlineChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-362">
-          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        <state relative-caret-position="232">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Index/views/page.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="324">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Index/views/autocomplete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1478">
-          <caret line="62" column="18" lean-forward="false" selection-start-line="62" selection-start-column="15" selection-end-line="62" selection-end-column="23" />
+        <state relative-caret-position="718">
+          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/online/views/onlineChart.js">
+    <entry file="file://$PROJECT_DIR$/src/Index/actionType.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="324">
+          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/recommendForm/Recommend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+        <state relative-caret-position="-1626">
+          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendForm/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="44" lean-forward="false" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="44" column="26" lean-forward="true" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/online/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/online/actionType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/online/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screenup/screenup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/bugumiList.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2160">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/animeMedia.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/online/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/actionType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/specificAnime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/jumbtron.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="46" column="67" lean-forward="false" selection-start-line="46" selection-start-column="67" selection-end-line="46" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/views/animeDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-875">
+          <caret line="270" column="47" lean-forward="true" selection-start-line="270" selection-start-column="47" selection-end-line="270" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/specificAnime/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

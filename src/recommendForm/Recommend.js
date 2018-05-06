@@ -3,7 +3,6 @@ import { Form, AutoComplete, Icon, Input, Button } from 'antd';
 import {connect} from 'react-redux'
 import *as actions from "./actions.js"
 import './recommend.css'
-import Complete from '../Index/views/autocomplete.js'
 const FormItem = Form.Item;
 const AutoOption = AutoComplete.Option;
 let uuid = 0;
@@ -11,18 +10,6 @@ class DynamicFieldSet extends Component {
     constructor(props,context)
     {
         super(props,context);
-        this.state={
-            test:[]
-        }
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.autoChange = this.autoChange.bind(this);
-    }
-    test = ()=>{
-        fetch('/api/getAnime').then(response =>{
-            response.json().then(
-            (rjs) => {this.setState({test:rjs})
-            })
-        })
     }
 
     remove = (k) => {
@@ -53,11 +40,11 @@ class DynamicFieldSet extends Component {
         });
     }
 
-    autoChange = (value) =>{
-        if(value !== "")
+    autoChange = (value) => {
+        if (value !== "")
             this.props.getAnimeList(value)
         else{
-            this.props.Optionmemset();
+            this.props.optionMemset();
         }
     }
 
@@ -71,8 +58,6 @@ class DynamicFieldSet extends Component {
     }
 
     render() {
-        this.test();
-        console.log(this.state.test);
         const { getFieldDecorator, getFieldValue } = this.props.form;
         const formItemLayout = {
             labelCol: {
@@ -90,8 +75,7 @@ class DynamicFieldSet extends Component {
                 sm: { span: 20, offset: 4 },
             },
         };
-        console.log(this.props.recommend)
-        const Options = this.props.recommend.animelist.map((anime,i)=>{
+        const Options = this.props.recommend.animeList.map((anime,i) => {
             return(<AutoOption key={i}>{anime}</AutoOption>)
         })
 
@@ -153,14 +137,14 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        getAnimeList:(word)=>{
-            dispatch(actions.FetchAnimeList(word));
+        getAnimeList:(word) => {
+            dispatch(actions.fetchAnimeList(word));
         },
-        submitData: (data)=>{
-            dispatch(actions.SubmitRecommend(data))
+        submitData: (data) => {
+            dispatch(actions.submitRecommend(data))
         },
-        Optionmemset:()=>{
-            dispatch(actions.FetchAnimeStart())
+        optionMemset:() => {
+            dispatch(actions.fetchAnimeStart())
         }
     }
 }

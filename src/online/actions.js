@@ -1,13 +1,12 @@
 import {ONLINE_START,ONLINE_SUCESS,ONLINE_FAILURE} from "./actionType.js";
-const fetchOnlineStart = () =>({
+const fetchOnlineStart = () => ({
     type:ONLINE_START
 });
-const fetchOnlineSucess = (result) =>(
-     {
+const fetchOnlineSucess = (result) => ({
         type: ONLINE_SUCESS,
         result
-    });
-const fetchOnlineFailure = () =>{
+});
+const fetchOnlineFailure = () => {
     var chartData = [];
     for (let i = 0; i < 20; i += 1) {
         chartData.push({
@@ -21,7 +20,7 @@ const fetchOnlineFailure = () =>{
         chartData
     }
 }
-export const onlineInit = ()=>{
+export const onlineInit = () => {
     return (dispatch) => {
         const apiUrl = `/api/getOnlineData`;
 
@@ -30,7 +29,6 @@ export const onlineInit = ()=>{
         return fetch(apiUrl).then((response) => {
 
             response.json().then((responseJson) => {
-                console.log(responseJson)
                 dispatch(fetchOnlineSucess(responseJson));
             }).catch((error) => {
                 dispatch(fetchOnlineFailure(error));

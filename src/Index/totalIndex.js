@@ -11,17 +11,14 @@ class IndexPage extends Component {
     constructor(props)
     {
         super(props);
-        this.changePage = this.changePage.bind(this);
-        this.wordPageChange = this.wordPageChange.bind(this);
-        this.onLoadSystem = this.onLoadSystem.bind(this);
         this.state = {
           "nowword":""
         };
     }
-    onLoadSystem(pos) {
+    onLoadSystem = (pos) => {
         this.props.changeLoad(pos);// 在reducer 那一层去控制总开关
     }
-    componentDidMount(){
+    componentDidMount = () => {
         this.props.initPage();
         this.props.initAnimeData();
     };
@@ -30,7 +27,7 @@ class IndexPage extends Component {
     };
     wordPageChange = (word) =>{
         this.setState({"nowword":word});
-        if(word === "")
+        if (word === "")
         {
             this.props.initAnimeData();
             this.props.initPage();
@@ -41,12 +38,15 @@ class IndexPage extends Component {
     };
     render() {
         let index = this.props.index
-        this.page = (index.pagesearch)?<Page word={this.state.nowword} pageChange={this.props.wordChange} totalPage={index.page}/>:<Page pageChange={this.changePage} totalPage={index.page}/>;
-        this.animes =(!index.reload ) ?<AnimeList allright={index.allright} onLoadSystem={this.props.changeLoad} list={index.animeslist}/>:<div className={"loading"}><Spin /></div>;
+        this.page = (index.pageSearch)?<Page word={this.state.nowword} pageChange={this.props.wordChange} totalPage={index.page}/>:<Page pageChange={this.changePage} totalPage={index.page}/>;
+        this.animes = (!index.reload ) ?<AnimeList allright={index.allright} onLoadSystem={this.props.changeLoad} list={index.animesList}/>:<div className={"loading"}><Spin /></div>;
         return (
             <div>
                 <Online />
-                <Complete searchChange={this.wordPageChange} searchList={index.searchList} />
+                <Complete
+                    searchChange={this.wordPageChange}
+                    searchList={index.searchList}
+                />
                 <div className={"animes"}>
                     {this.animes}
                     {this.page}
@@ -66,11 +66,11 @@ const mapDispatchToProps = (dispatch) => {
         initAnimeData: () => {
             dispatch(actions.fetchAnime());
         },
-        wordChange: (word,page=1)=> {
-            dispatch(actions.searchWord(word,page));
+        wordChange: (word, page=1) => {
+            dispatch(actions.searchWord(word, page));
         },
-        changeLoad: (pos)=> {
-            dispatch(actions.LoadChange(pos));
+        changeLoad: (pos) => {
+            dispatch(actions.loadChange(pos));
         }
     }
 };

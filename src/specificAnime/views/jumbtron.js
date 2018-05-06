@@ -37,14 +37,14 @@ class AnimeMedia extends React.Component {
                                 <div key="two" className={"media-heading"}>
                                     {data.animeTitle}
                                 </div>
-                                {tags.map((tag,i)=>{
-                                    return (<Tag key={i} color="blue">{tag}</Tag>)
-                                })
+                                {   tags.map((tag,i) => {
+                                        return (<Tag key={i} color="blue">{tag}</Tag>)
+                                    })
                                 }
                                 <div key="three" className={"actors"} style={wrapper}>
-                                    {actors.map((actor,i)=>{
-                                        if(actor.actor !== "...")
-                                            return( <Chip style={{margin:4+"px"}} key={i}>{actor.role}:{actor.actor} </Chip>)
+                                    {actors.map((actor,i) => {
+                                        if (actor.actor !== "..." && actor.actor !== '.')
+                                            return( <Chip style={{ margin:4+'px' }} key={i}>{actor.role}:{actor.actor} </Chip>)
                                     })}
                                 </div>
                             </Media>

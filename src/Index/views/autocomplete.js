@@ -9,13 +9,11 @@ class Complete extends Component {
     constructor(context,props)
     {
         super(context,props);
-        this.clickSearchButton = this.clickSearchButton.bind(this);
-        //this.searchChange = this.searchChange.bind(this);
         this.state={
             value:""
         }
     }
-    clickSearchButton(){
+    clickSearchButton = () => {
         if(this.state.value !== "")
         {
             this.search(this.state.value)
@@ -25,10 +23,7 @@ class Complete extends Component {
         }
 
     };
-    /*searchChange(value){
-        this.setState({value:value});
-        this.props.refreshSearch(this.state.value);
-    };*/
+
     render(){
         return (
             <Row>

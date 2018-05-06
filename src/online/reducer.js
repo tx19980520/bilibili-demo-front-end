@@ -19,7 +19,8 @@ export default (state={onlineData:chartData}, action) => {
             return state;
         }
         case ONLINE_SUCESS: {
-            console.log(action.result)
+            if (action.result.code === 201)
+                return state;
             return {onlineData:action.result};
         }
         case ONLINE_FAILURE: {

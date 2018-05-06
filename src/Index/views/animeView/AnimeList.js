@@ -55,7 +55,7 @@ class AnimeList extends Component {
                                             <Col md={3} key={i}>
 												<AnimeItem
                                                 pos={i}
-                                                sessionid={list[i].animeId}
+                                                sessionId={list[i].animeId}
                                                 picture={list[i].animePicturePath}
                                                 fans={list[i].fans}
                                                 title={list[i].animeTitle}
@@ -90,7 +90,7 @@ class AnimeList extends Component {
                                     <AnimeItem
                                         key={i}
                                         pos={i}
-                                        sessionid={list[i].animeId}
+                                        sessionId={list[i].animeId}
                                         picture={list[i].animePicturePath}
                                         fans={list[i].fans}
                                         title={list[i].animeTitle}

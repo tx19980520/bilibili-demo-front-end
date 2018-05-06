@@ -1,8 +1,8 @@
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import React,{Component}from 'react';
+import React,{Component} from 'react';
 import { Router,Route} from "react-router-dom";
 import createBrowserHistory from '../node_modules/history/createBrowserHistory'
-import BilibiliHome from "./BilibiliHome.js";
+import {BilibiliHome} from "./BilibiliHome.js";
 import {view as BilibiliSpecific} from "./specificAnime/"
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
