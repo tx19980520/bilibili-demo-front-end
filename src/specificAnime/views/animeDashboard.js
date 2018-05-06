@@ -17,7 +17,6 @@ class Episode extends Component
     constructor(props,context)
     {
         super(props,context);
-        this.bugumiLoad = this.bugumiLoad.bind(this);
         this.state = {
             picOpen: {},
         };
@@ -258,14 +257,21 @@ class DashBoard extends Component{
                 onClick={this.handleNestedDialogClose}
             />
         ];
-        console.log(this.props.specific);
+        let background = `/${this.props.specific.result.cover}`
+
         return (
             <div>
                 <Jumbotron>
                     {/*这个地方放我们的Media*/}
+                    <div className={'bg-wrap'}>
+                        <div className={'bg-blur'} style={{
+                            backgroundImage:`url(${background})`, backgroundRepeat:"no-repeat" ,backgroundSize:"100% 100%"}}>
+                        </div>
+                    </div>
                     <AnimeMedia
 						data={this.props.specific.result}
                         allright={this.props.specific.allready}
+                        className={'font-color'}
 					/>
                     <div className="lead">
                         <div className={"lead-button"}>
@@ -273,7 +279,7 @@ class DashBoard extends Component{
                         </div>
                         {/*这个也要用redux让我觉得很难受*/}
                         <Dialog
-                            title="Dialog With Date Picker"
+                            title="开心投喂，装备不要一分钱"
                             actions={actions}
                             modal={false}
                             open={this.props.specific.modalSwitch}

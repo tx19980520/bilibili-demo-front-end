@@ -29,34 +29,62 @@ class AnimeMedia extends React.Component {
             return (
                 <Media>
                     <QueueAnim>
+                        {
+                    [
                         <Media key="one" left className={"media-img"}>
-                            <Media object src={cover} alt="cover" className={"img-full"}/>
-                        </Media>
-                        <Media body>
-                            <Media heading>
-                                <div key="two" className={"media-heading"}>
+                        <QueueAnim>
+                                <Media object src={cover} alt="cover" className={"img-full"}/>
+                        </QueueAnim>
+                        </Media>,
+                    <Media body>
+                        <Media heading>
+                            <QueueAnim>
+                            {[
+                                <QueueAnim>
+                                <div key="two" className={"media-heading font-color"}>
                                     {data.animeTitle}
                                 </div>
+                                </QueueAnim>,
+                                <QueueAnim>
                                 {   tags.map((tag,i) => {
-                                        return (<Tag key={i} color="blue">{tag}</Tag>)
-                                    })
+                                    return (<Tag key={i} color="blue">{tag}</Tag>)
+                                })
                                 }
-                                <div key="three" className={"actors"} style={wrapper}>
-                                    {actors.map((actor,i) => {
-                                        if (actor.actor !== "..." && actor.actor !== '.')
-                                            return( <Chip style={{ margin:4+'px' }} key={i}>{actor.role}:{actor.actor} </Chip>)
-                                    })}
-                                </div>
-                            </Media>
-                            <div key="four" className={"evaluate"}>
-                                {data.specific.evaluate}
-                            </div>
-                            <div key="five" className={"media-rating"}>
-                                {rating[0].score}
-                                <br />
-                                {coins}
-                            </div>
+                                </QueueAnim>,
+                                <QueueAnim
+                                    component={'div'}
+                                    className={'actors'}
+                                    style = {wrapper}
+                                >
+                                        {
+                                            actors.map((actor,i) => {
+                                                if (actor.actor !== "..." && actor.actor !== '.')
+                                                    return(<Chip style={{ margin:4+'px' }} key={i}>{actor.role}:{actor.actor} </Chip>)
+                                            })
+                                        }
+                                </QueueAnim>
+                            ]}
+                            </QueueAnim>
                         </Media>
+                        <QueueAnim>
+                        <div key="four" className={"evaluate font-color"}>
+                            {data.specific.evaluate}
+                        </div>
+                        </QueueAnim>
+                        <QueueAnim>
+                            <div key="five" className={"media-rating"}>
+                                <div className={'rating-setting'}>
+                                    <i className="material-icons font-color">star</i>
+                                    <div className='rating-font font-color'>{rating[0].score}</div>
+                                </div>
+                                <div className={'rating-setting'}>
+                                    <i className="material-icons font-color">attach_money</i>
+                                    <div className={'rating-font'}>{coins}</div>
+                                </div>
+                            </div>
+                        </QueueAnim>
+                    </Media>
+                            ]}
                     </QueueAnim>
                 </Media>
             );

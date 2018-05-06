@@ -1,3 +1,6 @@
+.font-color {
+    color: #eacb63;
+}
 .actors{
     color: #666666;
     font-size: 15px;
@@ -17,4 +20,14 @@
 .media-heading{
 	font-size: 36px;
 		color: #666666;
+}
+.rating-font{
+    font-size: 20px;
+    color: #eacb63;
+    text-shadow: 0 0 10px #eacb63;
+}
+
+.rating-setting{
+    margin-bottom: 20px;
+    display: flex;
 }
