@@ -14,15 +14,21 @@ const recommendFailure = (error) => ({
 })
 export const submitRecommend = (animelist) => {
     return (dispatch) => {
-        const apiUrl = `/api/getOnlineData`;
-
+        const apiUrl = `http://localhost:8080/api/postRecommend`;
+        /*
+        let data = new FormData()
+        data.append('animelist',animelist);
+        */
+        let data = {"animelist":animelist};
         dispatch(recommendStart());
         let options={
-            body:animelist,
+			mode: 'cors',
+			method:"POST",
             headers:{
                 'Accept':"application/json",
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json;charset=utf-8',
+            },
+            body:JSON.stringify(data),
         }
         return fetch(apiUrl,options).then((response) => {
 

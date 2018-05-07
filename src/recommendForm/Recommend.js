@@ -10,6 +10,9 @@ class DynamicFieldSet extends Component {
     constructor(props,context)
     {
         super(props,context);
+        this.state = {
+            select:false
+        }
     }
 
     remove = (k) => {
@@ -75,9 +78,9 @@ class DynamicFieldSet extends Component {
                 sm: { span: 20, offset: 4 },
             },
         };
-        const Options = this.props.recommend.animeList.map((anime,i) => {
+        /*const Options = this.props.recommend.animeList.map((anime,i) => {
             return(<AutoOption key={i}>{anime}</AutoOption>)
-        })
+        })*/
 
         getFieldDecorator('keys', { initialValue: [] });
         const keys = getFieldValue('keys');
@@ -100,9 +103,11 @@ class DynamicFieldSet extends Component {
                     })(
                         <AutoComplete
                             onChange={this.autoChange}
-                            dataSource={Options}
+                            dataSource={this.props.recommend.animeList}
                             placeholder="autocomplete"
-                            style={{ width: '60%', marginRight: 8 }} >
+                            style={{ width: '60%', marginRight: 8 }}
+                            filterOption={false/*{(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}*/}
+                        >
                             <Input />
                         </AutoComplete>
                     )}
