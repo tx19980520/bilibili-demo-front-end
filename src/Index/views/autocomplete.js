@@ -26,32 +26,34 @@ class Complete extends Component {
 
     render(){
         return (
-            <Row>
-                <Col xs={12}>
-                    <Row center="xs">
-                        <Col xs={6} ><div className="global-search-wrapper" >
-                            <AutoComplete
-                                className="global-search"
-                                size="large"
-                                style={{ width: '100%' }}
-                                onChange={this.props.searchChange}
-                                dataSource={this.props.searchList}
-                                placeholder="请输入你想输入搜索的内容"
-                                filterOption={false/*{(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}*/}
-                            >
-                                <Input value={this.state.value}
-                                    suffix={(
-                                        <Button className="search-btn" size="large" type="primary" onClick={this.clickSearchButton}>
-                                            <Icon type="search" />
-                                        </Button>
-                                    )}
-                                />
-                                </AutoComplete>
-                        </div>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+            <div style={{display:'block'}}>
+                <Row>
+                    <Col xs={12}>
+                        <Row center="xs">
+                            <Col xs={6} ><div className="global-search-wrapper" >
+                                <AutoComplete
+                                    className="global-search"
+                                    size="large"
+                                    style={{ width: '100%' }}
+                                    onChange={this.props.searchChange}
+                                    dataSource={this.props.searchList}
+                                    placeholder="请输入你想输入搜索的内容"
+                                    filterOption={false/*{(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}*/}
+                                >
+                                    <Input value={this.state.value}
+                                        suffix={(
+                                            <Button className="search-btn" size="large" type="primary" onClick={this.clickSearchButton}>
+                                                <Icon type="search" />
+                                            </Button>
+                                        )}
+                                    />
+                                    </AutoComplete>
+                            </div>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </div>
         );}
 }
 

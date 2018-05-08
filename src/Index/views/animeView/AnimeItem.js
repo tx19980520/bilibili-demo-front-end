@@ -34,8 +34,6 @@ render(){//pictrue是封面的链接，fans是追番人数
     return (
         <div className={"item-margin"}>
             <Card
-            style={{
-            transform: `scale(${this.props.scale}, ${this.props.scale})`}}
                 cover={<img alt="example" onLoad={this.handleImageLoad} src={this.props.picture} className={'img-responsive'} />}
                 actions={
                     [

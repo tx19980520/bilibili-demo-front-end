@@ -6122,7 +6122,7 @@ querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
 
-raf@3.4.0, raf@^3.1.0, raf@~3.4.0:
+raf@3.4.0, raf@3.x, raf@^3.1.0, raf@~3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.0.tgz#a28876881b4bc2ca9117d4138163ddb80f781575"
   dependencies:
@@ -6348,6 +6348,16 @@ rc-rate@~2.4.0:
     classnames "^2.2.5"
     prop-types "^15.5.8"
     rc-util "^4.3.0"
+
+rc-scroll-anim@^2.5.1:
+  version "2.5.1"
+  resolved "http://registry.npm.taobao.org/rc-scroll-anim/download/rc-scroll-anim-2.5.1.tgz#f8a5c075e9a9c659582cc5a6e972f02d9e9b1f54"
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.6.0"
+    raf "3.x"
+    rc-tween-one "^1.7.0"
+    tween-functions "1.x"
 
 rc-select@~7.7.0:
   version "7.7.3"
@@ -7897,7 +7907,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tween-functions@~1.2.0:
+tween-functions@1.x, tween-functions@~1.2.0:
   version "1.2.0"
   resolved "http://registry.npm.taobao.org/tween-functions/download/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
 
