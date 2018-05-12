@@ -1,6 +1,7 @@
-import React, {Component}from 'react'
+import React, {Component} from 'react'
 import { Form, AutoComplete, Icon, Input, Button } from 'antd';
 import {connect} from 'react-redux'
+import RecommendModal from "./RecommendModal.js"
 import *as actions from "./actions.js"
 import './recommend.css'
 const FormItem = Form.Item;
@@ -11,9 +12,14 @@ class DynamicFieldSet extends Component {
     {
         super(props,context);
         this.state = {
-            select:false
+            select:false,
+			modal:false
         }
     }
+	ModalOpen = () => {
+		this.handleSubmit();
+		this.setState({modal:true})
+	}
 
     remove = (k) => {
         const { form } = this.props;
@@ -51,10 +57,10 @@ class DynamicFieldSet extends Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
+    handleSubmit = () => {
         this.props.form.validateFields((err, values) => {
             if (!err) {
+				console.log(values.names)
                 this.props.submitData(values.names)
             }
         });
@@ -123,18 +129,21 @@ class DynamicFieldSet extends Component {
             );
         });
         return (
-            <Form onSubmit={this.handleSubmit}>
-                {formItems}
-                <FormItem {...formItemLayoutWithOutLabel}>
-                    <Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
-                        <Icon type="plus" /> Add field
-                    </Button>
-                </FormItem>
-                <FormItem {...formItemLayoutWithOutLabel}>
-                    <Button type="primary" htmlType="submit">Submit</Button>
-                </FormItem>
-            </Form>
-        );
+			<div>
+				<Form>
+					{formItems}
+					<FormItem {...formItemLayoutWithOutLabel}>
+						<Button type="dashed" onClick={this.add} style={{ width: '60%' }}>
+							<Icon type="plus" /> Add field
+						</Button>
+					</FormItem>
+					<FormItem {...formItemLayoutWithOutLabel}>
+						<Button type="primary" htmlType="submit" onClick={this.ModalOpen}>Submit</Button>
+					</FormItem>
+				</Form>
+				<RecommendModal open={this.state.modal}/>
+			</div>
+			);
     }
 }
 const mapStateToProps = (state) => {

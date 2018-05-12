@@ -41,6 +41,7 @@ class AnimeList extends Component {
                         style={{ overflow: 'hidden',minHeight:300}}
                     >
                             <QueueAnim
+								key={1}
                                 component={Row}
                                 around='md'
                                 duration={1000}

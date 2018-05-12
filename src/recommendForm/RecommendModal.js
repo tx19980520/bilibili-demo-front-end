@@ -2,19 +2,18 @@ import React from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import {RecommendList} from './RecommendList.js'
-/**
+import RecommendList from './RecommendList.js'
+/*
  * A modal dialog can only be closed by selecting one of the actions.
  */
-export default class DialogExampleModal extends React.Component {
+ const customContentStyle = {
+  width: '100%',
+  maxWidth: 'none',
+};
+class RecommendModal extends React.Component {
   state = {
-    open: false,
-  };
-
-  handleOpen = () => {
-    this.setState({open: true});
-  };
-
+	  open:this.props.open
+  }
   handleClose = () => {
     this.setState({open: false});
   };
@@ -40,8 +39,9 @@ export default class DialogExampleModal extends React.Component {
           title="欧皇来试试你的运气吧！"
           actions={actions}
           modal={true}
-		  contentStyle={}
-          open={this.state.open}
+		  contentStyle={customContentStyle}
+		  autoScrollBodyContent={true}
+          open={this.props.open}
         >
           <RecommendList/>
         </Dialog>
@@ -49,3 +49,4 @@ export default class DialogExampleModal extends React.Component {
     );
   }
 }
+export default RecommendModal
