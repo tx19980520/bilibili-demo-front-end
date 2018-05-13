@@ -5,7 +5,6 @@ import RecommendModal from "./RecommendModal.js"
 import *as actions from "./actions.js"
 import './recommend.css'
 const FormItem = Form.Item;
-const AutoOption = AutoComplete.Option;
 let uuid = 0;
 class DynamicFieldSet extends Component {
     constructor(props,context)

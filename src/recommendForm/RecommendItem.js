@@ -6,10 +6,10 @@ const { Meta } = Card
 
 export default class RecommendItem extends Component{
 	state={
-		_deg:0;
+		_deg:0
 	}
 	overTurn = () => {
-		this.setState({_deg:_deg+180})
+		this.setState({_deg:180})
 	}
 	handleLoading = () => {
 		this.props.imgLoad(this.props.pos);
@@ -20,8 +20,8 @@ export default class RecommendItem extends Component{
 		let redirect = `/spec/${_id}`
 		let status = (animeFinished == 2)?'是':'否'
 		return (
-		<div className={"photo-wrap"} style={{WebkitTransform:rotateY(this.state._deg)}} onClick={this.overTurn}>
-			<div className={"side-front"}>
+		<div className={"photo-wrap"} style={{WebkitTransform:`rotateY(${this.state._deg}deg)`}} onClick={this.overTurn}>
+			<div className={"side-back"}>
                 <Card
                 cover={<img alt="cover" onLoad = {this.handleLoading}  src={path} className={'img-responsive'} />}
                 actions={
@@ -42,7 +42,7 @@ export default class RecommendItem extends Component{
                 />
             </Card>
             </div>
-            <div className={"side-back"}>
+            <div className={"side-front"}>
                 <img src="./static/sideback.png" />
             </div>
         </div>

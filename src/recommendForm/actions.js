@@ -88,7 +88,7 @@ const postFeedbackSuccess = (data) => ({
 export const submitFeedBack = (feedback) => {
     return (dispatch) => {
         const apiUrl = "http://localhost:8080/api/postFeedabck";
-        let data = {"animelist":animelist};/*need to modify*/
+        let data = {"animelist":feedback};/*need to modify*/
         dispatch(postFeedbackStart());
         let options={
 			mode: 'cors',

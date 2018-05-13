@@ -1,5 +1,4 @@
 .photo-wrap {
-			max-height: 440px;
             -webkit-transform: rotateY(0deg);
             -webkit-transform-style: preserve-3d; /*让其下一级子元素拥有3D效果，背面隐藏效果。如果没有该属性子元素-webkit-backface-visibility: hidden;无效*/
             transition: all 0.5s ease-in;
@@ -13,6 +12,9 @@
             -webkit-transform: rotateY(0deg);
         }
         .side-back {
+			position: absolute;
+			left:0;
+			right:0;
             -webkit-backface-visibility: hidden;
             -webkit-transform: rotateY(180deg);
         }
