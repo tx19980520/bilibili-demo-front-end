@@ -5,10 +5,10 @@ import {reducer as recommendReducer} from './recommendForm/'
 import {reducer as indexReducer} from "./Index/";
 import {reducer as onlineReducer} from "./online/";
 import {reducer as specReducer} from "./specificAnime/";
+import {reducer as feedbackReducer} from "./FeedBackController/";
 
 const reducer = combineReducers({
-    /*animes: animeReducer,
-    page: pageReducer,*/
+	feedback: feedbackReducer,
     recommend: recommendReducer,
     index: indexReducer,
     online: onlineReducer,

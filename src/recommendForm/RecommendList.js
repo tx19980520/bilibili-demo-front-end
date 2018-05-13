@@ -4,6 +4,7 @@ import *as actions from "./actions.js"
 import RecommendItem from './RecommendItem.js'
 import {Row,Col} from "react-flexbox-grid"
 import {Spin} from 'antd'
+import "./RecommendList.css"
 
 class RecommendList extends Component{
 	imgLoad = (pos) => {
@@ -46,7 +47,7 @@ class RecommendList extends Component{
 		}
 		else if (this.props.loading && !this.props.allRight) {
 			return (
-			<div style={{minHeight:700}}>
+			<div>
 				<Row around='md'  style={{display:"none"}}>
 				{
 					this.props.recommendList.map((anime,i) => {
@@ -83,7 +84,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
 	
     return {allRight:state.recommend.allRight, 
-			recommendList:state.recommend.recommendList,
+			recommendList:state.recommend.recommendList
 			loading:state.recommend.postover,
 			code:state.recommend.postcode}
 };

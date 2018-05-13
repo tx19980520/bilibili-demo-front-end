@@ -1,8 +1,11 @@
 import React from 'react';
+import {connect} from "react-redux"
 import Dialog from 'material-ui/Dialog';
+import FeedBackForm from "./FeedBackForm.js"
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import RecommendList from './RecommendList.js'
+import "./RecommendModal.css"
 /*
  * A modal dialog can only be closed by selecting one of the actions.
  */
@@ -11,13 +14,18 @@ import RecommendList from './RecommendList.js'
   maxWidth: 'none',
 };
 class RecommendModal extends React.Component {
-  state = {
-	  open:this.props.open
-  }
-  handleClose = () => {
-    this.setState({open: false});
-  };
-
+	state = {
+		feedOpen:false
+	}
+	handleClose = () => {
+    this.props.modalClose();
+	};
+	openFeedBack = () => {
+	  this.setState({feedOpen:true})
+	}
+	closeFeedBack = () => {
+	  this.setState({feedOpen:false})
+	}
   render() {
     const actions = [
       <FlatButton
@@ -28,11 +36,18 @@ class RecommendModal extends React.Component {
       <FlatButton/*for the next */
         label="请填写你的满意程度"
         primary={true}
-        disabled={true}
-        onClick={this.handleClose}
+        onClick={this.openFeedBack}
       />,
     ];
-
+	
+	const feedActions = [
+      <FlatButton
+        label="残忍离开"
+        primary={true}
+        onClick={this.closeFeedBack}
+      />,
+    ];
+	
     return (
       <div>
         <Dialog
@@ -40,13 +55,24 @@ class RecommendModal extends React.Component {
           actions={actions}
           modal={true}
 		  contentStyle={customContentStyle}
-		  autoScrollBodyContent={true}
           open={this.props.open}
         >
-          <RecommendList/>
+          <RecommendList />
+        </Dialog>
+		<Dialog
+          title="意见反馈"
+          actions={actions}
+          modal={true}
+          open={this.state.feedOpen}
+        >
+		<FeedBackForm />
         </Dialog>
       </div>
+	  
     );
   }
 }
-export default RecommendModal
+const mapStateToProps = (state) => {
+	recommendList:state.recommend.recommendList
+}
+export default connect(mapStateToProps, null)(RecommendModal)

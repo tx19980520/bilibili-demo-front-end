@@ -12,10 +12,14 @@ class DynamicFieldSet extends Component {
         super(props,context);
         this.state = {
             select:false,
-			modal:false
+			modal:false,
+			values:[]
         }
     }
-	ModalOpen = () => {
+	closeModal = () => {
+		this.setState({modal:false})
+	}
+	modalOpen = () => {
 		this.handleSubmit();
 		this.setState({modal:true})
 	}
@@ -64,6 +68,30 @@ class DynamicFieldSet extends Component {
             }
         });
     }
+	checkSame = (rule, value, callback) => {
+		console.log(value)
+			let values = this.props.form.getFieldsValue().names
+			let count = 0;
+			for(let i = 0, len = values.length; i < len; ++i)
+			{
+				if(values[i] == value)
+				{
+					++count
+				}
+				if(count == 2)
+				{
+					callback("含有相同的番剧");
+					break;
+				}
+			}
+			/*(err, values) => {
+			console.log('Received values of form: ', values);
+			if (values.name.indexOf(value) >= 0){
+				callback("已有同名番剧，请换一个")
+			}
+		};
+		*/
+	}
 
     render() {
         const { getFieldDecorator, getFieldValue } = this.props.form;
@@ -102,8 +130,7 @@ class DynamicFieldSet extends Component {
                         rules: [{
                             required: true,
                             whitespace: true,
-                            message: "请输入一个正确的番剧名称",
-
+							validator: this.checkSame,
                         }],
                     })(
                         <AutoComplete
@@ -137,10 +164,10 @@ class DynamicFieldSet extends Component {
 						</Button>
 					</FormItem>
 					<FormItem {...formItemLayoutWithOutLabel}>
-						<Button type="primary" htmlType="submit" onClick={this.ModalOpen}>Submit</Button>
+						<Button type="primary" htmlType="submit" onClick={this.modalOpen}>Submit</Button>
 					</FormItem>
 				</Form>
-				<RecommendModal open={this.state.modal}/>
+				<RecommendModal open={this.state.modal} modalClose={this.closeModal}/>
 			</div>
 			);
     }

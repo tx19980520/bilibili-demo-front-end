@@ -24,26 +24,15 @@ export default class RecommendItem extends Component{
 			<div className={"side-back"}>
                 <Card
                 cover={<img alt="cover" onLoad = {this.handleLoading}  src={path} className={'img-responsive'} />}
-                actions={
-                    [
-                        <NavLink 
-							to={redirect} 
-							onClick={(e) => {window.scrollTo(0,0);}}>
-							<Icon type="setting" />
-						</NavLink>,
-                        <Icon type="edit" />,
-                        <Icon type="ellipsis" />
-                    ]
-                }
 				>
                 <Meta
-                    title={this.props.title}
+                    title={animeTitle}
                     description= {<div><p>{fans}</p><p>是否完结：{status}</p></div>}
                 />
             </Card>
             </div>
             <div className={"side-front"}>
-                <img src="./static/sideback.png" />
+                <img src="./static/sideback.png"/>
             </div>
         </div>
 	)}

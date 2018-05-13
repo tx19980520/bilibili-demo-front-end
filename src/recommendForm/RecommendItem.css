@@ -8,6 +8,7 @@
             -webkit-transform: rotateY(180deg);
         }
         .side-front {
+			margin-bottom:25px;
             -webkit-backface-visibility: hidden;
             -webkit-transform: rotateY(0deg);
         }
@@ -23,6 +24,6 @@
         }
 .img-responsive {
     display: inline-block;
-    height: 302px;
+    height: 255px;
     max-width: 100%;
 }
