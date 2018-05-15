@@ -1,7 +1,9 @@
-import {ANIME_FETCH_START, ANIME_FETCH_SUCCESS, ANIME_FETCH_FAILURE,GET_TOTAL_PAGE,GET_PAGE_SUCCESS,GET_PAGE_FAILURE} from './actionType.js';
-import {SEARCH_WORD_FAILURE, SEARCH_WORD_START, SEARCH_WORD_SUCCESS} from "./actionType.js";
-import {LOAD_CHANGE} from "./actionType.js";
-export default (state = {step: ANIME_FETCH_START,page:-1, pageSearch:false, reload: false, animesList:[], searchList:[], animeCode:200, searchCode:200, allright:false, loadController:[]}, action) => {
+import { ANIME_FETCH_START, ANIME_FETCH_SUCCESS, ANIME_FETCH_FAILURE, GET_TOTAL_PAGE,GET_PAGE_SUCCESS, GET_PAGE_FAILURE } from './actionType.js';
+import { SEARCH_WORD_FAILURE, SEARCH_WORD_START, SEARCH_WORD_SUCCESS } from "./actionType.js";
+import { LOAD_CHANGE } from "./actionType.js";
+export default (state = {step: ANIME_FETCH_START, page: -1, pageSearch: false, 
+						 reload: false, animesList: [], searchList: [], animeCode: 200, 
+						 searchCode:200, allright: false, loadController: []}, action) => {
     switch(action.type) {
         case ANIME_FETCH_SUCCESS: {
             let {loadController} = state;

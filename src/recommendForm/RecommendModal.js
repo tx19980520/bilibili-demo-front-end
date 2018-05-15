@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from "react-redux"
+import { connect } from "react-redux"
 import Dialog from 'material-ui/Dialog';
 import FeedBackForm from "./FeedBackForm.js"
 import FlatButton from 'material-ui/FlatButton';

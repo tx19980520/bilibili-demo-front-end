@@ -1,14 +1,14 @@
-import {ANIME_FETCH_FAILURE,ANIME_FETCH_START,ANIME_FETCH_SUCCESS} from "./actionType";// anime
-import {GET_TOTAL_PAGE,GET_PAGE_SUCCESS,GET_PAGE_FAILURE} from "./actionType.js";//page
-import {SEARCH_WORD_FAILURE,SEARCH_WORD_START,SEARCH_WORD_SUCCESS} from "./actionType.js";
-import {LOAD_CHANGE} from "./actionType.js";
+import { ANIME_FETCH_FAILURE, ANIME_FETCH_START, ANIME_FETCH_SUCCESS } from "./actionType";// anime
+import { GET_TOTAL_PAGE, GET_PAGE_SUCCESS, GET_PAGE_FAILURE } from "./actionType.js";//page
+import { SEARCH_WORD_FAILURE, SEARCH_WORD_START, SEARCH_WORD_SUCCESS } from "./actionType.js";
+import { LOAD_CHANGE } from "./actionType.js";
 /*ajax*/
-export const loadChange = (pos) => ({
+export const picLoadDone = (pos) => ({
     type:LOAD_CHANGE,
     pos:pos
 });
 let ajaxId = 0;
-const dispatchIfValid = (action,dispatch,seqId) => {
+const dispatchIfValid = (action, dispatch, seqId) => {
     if(ajaxId === seqId)
     {
         return dispatch(action);

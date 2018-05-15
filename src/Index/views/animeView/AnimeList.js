@@ -1,15 +1,15 @@
-import React,{Component} from "react"
-import {AnimeItem} from "./AnimeItem.js";
+import React, {Component} from "react"
+import AnimeItem from "./AnimeItem.js";
 import QueueAnim from 'rc-queue-anim';
 import ScrollAnim from 'rc-scroll-anim';
 import {Spin} from 'antd'
 import "./animeItem.css"
-import {Row,Col} from "react-flexbox-grid"
+import {Row, Col} from "react-flexbox-grid"
 const ScrollOverPack = ScrollAnim.OverPack;
 class AnimeList extends Component {
 
-    constructor(props,context){
-        super(props,context);
+    constructor(props, context){
+        super(props, context);
         // 我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
     };
 
@@ -17,7 +17,7 @@ class AnimeList extends Component {
     render(){
 
         let list = this.props.list;
-        let animein = list.map((item, i) => {
+        let animeMapList = list.map((item, i) => {
             return (
                 <Col md={3} key={i} >
                     <AnimeItem
@@ -46,16 +46,15 @@ class AnimeList extends Component {
                                 around='md'
                                 duration={1000}
                             >
-                                    {animein}
+                                {animeMapList}
                             </QueueAnim>
                     </ScrollOverPack>
             )
         }else{
-            console.log("here");
             return(
                 <div>
                     <div className={'before-load'}>
-                    {animein}
+                    {animeMapList}
                     </div>
                     <div className={'loading'}>
                         <Spin />
@@ -64,7 +63,7 @@ class AnimeList extends Component {
             )
         }
     };
-    shouldComponentUpdate(nextProps,nextStates)
+    shouldComponentUpdate(nextProps, nextStates)
     {
         return (nextProps.allright);
     }

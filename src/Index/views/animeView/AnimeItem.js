@@ -1,15 +1,16 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import NavLink from '../../../NavLink/NavLink.js'
 import "./animeItem.css"
 import { Card, Icon, Avatar } from 'antd';
+import { picLoadDone } from "../actions.js"
 const { Meta } = Card;
 
-export class AnimeItem extends Component{
-    constructor(props,context){
-        super(props,context);
+ class AnimeItem extends Component{
+    constructor(props, context){
+        super(props, context);
     };
-    handleImageLoad =() => {
-        this.props.onLoadControl(this.props.pos);
+    handleImageLoad = () => {
+        this.props.picLoadDone(this.props.pos);
     }
 render(){//pictrue是封面的链接，fans是追番人数
     /*if(this.state.imageStatus == "img-responsive")
@@ -28,8 +29,8 @@ render(){//pictrue是封面的链接，fans是追番人数
         )
     }*/
 	
-    let fansNum = "追番人数:"+this.props.fans;
-    let status = (this.props.animeFinished === 1)?"未完结":"已完结";
+let fansNum = `追番人数:${this.props.fans}`;
+    let finished = (this.props.animeFinished === 1)? "未完结" : "已完结";
     let path = `/spec/${this.props.sessionId}`;
     return (
         <div className={"item-margin"}>
@@ -37,7 +38,7 @@ render(){//pictrue是封面的链接，fans是追番人数
                 cover={<img alt="example" onLoad={this.handleImageLoad} src={this.props.picture} className={'img-responsive'} />}
                 actions={
                     [
-                        <NavLink to={path} onClick={(e) => {window.scrollTo(0,0);}}><Icon type="setting" /></NavLink>,
+                        <NavLink to={ path } onClick={(e) => {window.scrollTo(0,0);}}><Icon type="setting" /></NavLink>,
                         <Icon type="edit" />,
                         <Icon type="ellipsis" />
                     ]
@@ -45,9 +46,18 @@ render(){//pictrue是封面的链接，fans是追番人数
             >
                 <Meta
                     title={this.props.title}
-                    description= {<div><p>{fansNum}</p><p>是否完结：{status}</p></div>}
+                    description= {<div><p>{fansNum}</p><p>是否完结：{ finished }</p></div>}
                 />
             </Card>
         </div>
     )}
 }
+const mapDispacthToProps = (dispatch) => {
+	return {
+		picLoadDone:(pos) => {
+			dispatch(picLoadDone(pos))
+		},
+	}	
+}
+
+export default connect(null, mapDispacthToProps)(AnimeItem)

@@ -1,32 +1,31 @@
-import React,{Component} from "react";
-import {connect} from "react-redux";
+import React, { Component } from "react";
+import { connect } from "react-redux";
 import Page from './views/page.js';
 import AnimeList from './views/animeView/AnimeList'
 import Complete from './views/autocomplete.js';
-import {view as Online} from "../online/"
+import { view as Online } from "../online/"
 import * as actions from "./actions.js"
-import {Spin} from 'antd';
+import { Spin } from 'antd';
 import "./totalIndex.css"
 class IndexPage extends Component {
     constructor(props)
     {
         super(props);
         this.state = {
-          "nowword":""
+          "nowWord":""
         };
-    }
-    onLoadSystem = (pos) => {
-        this.props.changeLoad(pos);// 在reducer 那一层去控制总开关
     }
     componentDidMount = () => {
         this.props.initPage();
         this.props.initAnimeData();
-    };
+    }
+	
     changePage = (page) => {
         this.props.onPageChange(page)
-    };
-    wordPageChange = (word) =>{
-        this.setState({"nowword":word});
+    }
+	
+    wordPageChange = (word) => {
+        this.setState({"nowWord": word});
         if (word === "")
         {
             this.props.initAnimeData();
@@ -59,7 +58,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onPageChange: (page) => {
             dispatch(actions.fetchAnimebyPage(page))
-        },
+        },2
         initPage: () => {
             dispatch(actions.fetchPage())
         },
@@ -68,13 +67,10 @@ const mapDispatchToProps = (dispatch) => {
         },
         wordChange: (word, page=1) => {
             dispatch(actions.searchWord(word, page));
-        },
-        changeLoad: (pos) => {
-            dispatch(actions.loadChange(pos));
         }
     }
 };
-const mapStateToProps = (state) =>{
-    return {index:state.index}
+const mapStateToProps = (state) => {
+    return {index: state.index}
 };
 export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);
