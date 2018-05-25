@@ -4,16 +4,16 @@ import {
   Form, Icon, Rate,
 } from 'antd';
 const FormItem = Form.Item;
-import {submitFeedBack} from "./actions.js"
 class FeedBack extends React.Component{
 	handleSubmit = () => {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
-		// this.props.feedBackSubmit(values)
+		 this.props.submitAjax(values)
       }
     });
   }
+
 	render(){
 		const { getFieldDecorator } = this.props.form;
 		return (
@@ -37,14 +37,8 @@ class FeedBack extends React.Component{
 		)
 	}
 }
-const mapStateToProps = (state) => {
-	recommendList:state.recommend.recommendList
-}
-const mapDispatchToProps = (dispatch) => {
-	return {
-		feedBackSubmit: (values) => {
-			submitFeedBack(values)
-		}
-	}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(FeedBackForm)
+const mapStateToProps = (state) => ({
+	recommendList: state.recommend.recommendList
+})
+
+export default  Form.create()(connect(mapStateToProps, null)(FeedBack))

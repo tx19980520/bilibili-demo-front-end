@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from "react-redux"
 import Dialog from 'material-ui/Dialog';
 import FeedBackForm from "./FeedBackForm.js"
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton'
 import RecommendList from './RecommendList.js'
+import {postFeedBack} from "./actions.js"
 import "./RecommendModal.css"
 /*
  * A modal dialog can only be closed by selecting one of the actions.
@@ -13,19 +13,28 @@ import "./RecommendModal.css"
   width: '100%',
   maxWidth: 'none',
 };
+
 class RecommendModal extends React.Component {
 	state = {
 		feedOpen:false
 	}
+
+    submitFeedBack = (postData) => {
+
+    }
+
 	handleClose = () => {
     this.props.modalClose();
-	};
+	}
+
 	openFeedBack = () => {
 	  this.setState({feedOpen:true})
 	}
+
 	closeFeedBack = () => {
 	  this.setState({feedOpen:false})
 	}
+
   render() {
     const actions = [
       <FlatButton
@@ -46,6 +55,11 @@ class RecommendModal extends React.Component {
         primary={true}
         onClick={this.closeFeedBack}
       />,
+       <FlatButton
+        label="投喂！"
+        primary={true}
+        onClick={this.props.postFeedBack}
+        />
     ];
 	
     return (
@@ -61,18 +75,29 @@ class RecommendModal extends React.Component {
         </Dialog>
 		<Dialog
           title="意见反馈"
-          actions={actions}
+          actions={feedActions}
           modal={true}
           open={this.state.feedOpen}
+          autoScrollBodyContent={true}
         >
-		<FeedBackForm />
+		<FeedBackForm submitAjax = {this.submitFeedBack}/>
         </Dialog>
       </div>
 	  
     );
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => ({
 	recommendList:state.recommend.recommendList
+})
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        postFeedBack: (data) => {
+            dispatch(postFeedBack(data))
+        },
+
+    }
 }
-export default connect(mapStateToProps, null)(RecommendModal)
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecommendModal)

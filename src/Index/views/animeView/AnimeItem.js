@@ -1,8 +1,9 @@
 import React, { Component } from "react"
+import {connect} from "react-redux"
 import NavLink from '../../../NavLink/NavLink.js'
 import "./animeItem.css"
 import { Card, Icon, Avatar } from 'antd';
-import { picLoadDone } from "../actions.js"
+import { picLoadDone } from "../../actions.js"
 const { Meta } = Card;
 
  class AnimeItem extends Component{

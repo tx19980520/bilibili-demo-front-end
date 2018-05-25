@@ -84,7 +84,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
 	
     return {allRight:state.recommend.allRight, 
-			recommendList:state.recommend.recommendList
+			recommendList:state.recommend.recommendList,
 			loading:state.recommend.postover,
 			code:state.recommend.postcode}
 };

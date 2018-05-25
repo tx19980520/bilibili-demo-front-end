@@ -85,7 +85,7 @@ const postFeedbackSuccess = (data) => ({
     type:POST_FEEDBACK_SUCCESS,
     data
 })
-export const submitFeedBack = (feedback) => {
+export const postFeedBack = (feedback) => {
     return (dispatch) => {
         const apiUrl = "http://localhost:8080/api/postFeedabck";
         let data = {"animelist":feedback};/*need to modify*/

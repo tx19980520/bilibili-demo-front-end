@@ -58,7 +58,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onPageChange: (page) => {
             dispatch(actions.fetchAnimebyPage(page))
-        },2
+        },
         initPage: () => {
             dispatch(actions.fetchPage())
         },

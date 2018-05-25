@@ -20,6 +20,7 @@ class DynamicFieldSet extends Component {
 		this.setState({modal:false})
 	}
 	modalOpen = () => {
+        console.log("modalOpen")
 		this.handleSubmit();
 		this.setState({modal:true})
 	}
@@ -61,11 +62,13 @@ class DynamicFieldSet extends Component {
     }
 
     handleSubmit = () => {
+        console.log("handle")
         this.props.form.validateFields((err, values) => {
             if (!err) {
 				console.log(values.names)
                 this.props.submitData(values.names)
             }
+            console.log(err)
         });
     }
 	checkSame = (rule, value, callback) => {
@@ -74,16 +77,17 @@ class DynamicFieldSet extends Component {
 			let count = 0;
 			for(let i = 0, len = values.length; i < len; ++i)
 			{
-				if(values[i] == value)
+				if(values[i] === value)
 				{
 					++count
 				}
-				if(count == 2)
+				if(count === 2)
 				{
 					callback("含有相同的番剧");
 					break;
 				}
 			}
+            callback()
 			/*(err, values) => {
 			console.log('Received values of form: ', values);
 			if (values.name.indexOf(value) >= 0){

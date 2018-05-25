@@ -14,9 +14,11 @@ export default class BilibiliRouter extends Component{
         return(
             <MuiThemeProvider muiTheme={muiThemebtn}>
             <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+                <div>
 				<Route exact path='/controlPanel' component={FeedBackController} />
                <Route exact path='/' component={BilibiliHome} />
                <Route exact path="/spec/:id" component={BilibiliSpecific} />
+              </div>
             </Router>
             </MuiThemeProvider>
         )

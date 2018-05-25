@@ -24,7 +24,7 @@ class FeedBackController extends React.Component{
 }
 const mapStateToProps = (state) => {
 	return {
-		feedbackData:state.feedback.data,
+		feedbackData: state.feedback.data,
 	}
 }
 const mapDispatchToProps = (dispatch) =>{
