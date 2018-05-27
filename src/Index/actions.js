@@ -50,7 +50,7 @@ export const fetchAnime = () => {
 };
 export const fetchAnimebyPage = (page) => {
     return (dispatch) => {
-        const apiUrl = `/api/getAnime?`+`page=${page}`;
+        const apiUrl = `/api/getAnime?page=${page}`;
         let pageId = ++ ajaxId;
         dispatchIfValid(fetchAnimeStart(),dispatch,pageId);
 

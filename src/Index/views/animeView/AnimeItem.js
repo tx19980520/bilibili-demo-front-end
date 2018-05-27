@@ -1,15 +1,12 @@
 import React, { Component } from "react"
-import {connect} from "react-redux"
+import { connect } from "react-redux"
 import NavLink from '../../../NavLink/NavLink.js'
 import "./animeItem.css"
-import { Card, Icon, Avatar } from 'antd';
+import { Card, Icon } from 'antd';
 import { picLoadDone } from "../../actions.js"
 const { Meta } = Card;
 
  class AnimeItem extends Component{
-    constructor(props, context){
-        super(props, context);
-    };
     handleImageLoad = () => {
         this.props.picLoadDone(this.props.pos);
     }

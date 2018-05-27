@@ -8,12 +8,6 @@ import {Row, Col} from "react-flexbox-grid"
 const ScrollOverPack = ScrollAnim.OverPack;
 class AnimeList extends Component {
 
-    constructor(props, context){
-        super(props, context);
-        // 我们不会在这个层级上定义动作，我们在AnimeItem层级定义动作
-    };
-
-
     render(){
 
         let list = this.props.list;

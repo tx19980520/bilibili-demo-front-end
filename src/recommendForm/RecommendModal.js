@@ -1,10 +1,11 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 import { connect } from "react-redux"
 import Dialog from 'material-ui/Dialog';
 import FeedBackForm from "./FeedBackForm.js"
 import FlatButton from 'material-ui/FlatButton'
 import RecommendList from './RecommendList.js'
-import {postFeedBack} from "./actions.js"
+import { postFeedBack, feedClose, feedOpen } from "./actions.js"
 import "./RecommendModal.css"
 /*
  * A modal dialog can only be closed by selecting one of the actions.
@@ -27,25 +28,26 @@ class RecommendModal extends React.Component {
     this.props.modalClose();
 	}
 
-	openFeedBack = () => {
-	  this.setState({feedOpen:true})
-	}
 
-	closeFeedBack = () => {
-	  this.setState({feedOpen:false})
+	postFeedBack = () => {
+      this.props.postFeedBack(this.props.recommendFeedBack)
 	}
+	redirectHome = () => {
+	    console.log(this.props.history)
+        this.props.history.push("/spec/1512")
+    }
 
   render() {
     const actions = [
       <FlatButton
         label="转身离开"
         primary={true}
-        onClick={this.handleClose}
+        onClick={this.props.handleClose}
       />,
       <FlatButton/*for the next */
         label="请填写你的满意程度"
         primary={true}
-        onClick={this.openFeedBack}
+        onClick={this.props.openFeedBack}
       />,
     ];
 	
@@ -53,14 +55,21 @@ class RecommendModal extends React.Component {
       <FlatButton
         label="残忍离开"
         primary={true}
-        onClick={this.closeFeedBack}
+        onClick={this.props.closeFeedBack}
       />,
        <FlatButton
         label="投喂！"
         primary={true}
-        onClick={this.props.postFeedBack}
+        onClick={this.postFeedBack}
         />
     ];
+      const feedbackActions = [
+          <FlatButton
+              label="回到主页"
+              primary={true}
+              onClick={this.redirectHome}
+          />
+      ];
 	
     return (
       <div>
@@ -77,18 +86,29 @@ class RecommendModal extends React.Component {
           title="意见反馈"
           actions={feedActions}
           modal={true}
-          open={this.state.feedOpen}
+          open={this.props.feedOpen}
           autoScrollBodyContent={true}
         >
 		<FeedBackForm submitAjax = {this.submitFeedBack}/>
         </Dialog>
+          <Dialog
+              title="感谢投喂"
+              actions={feedbackActions}
+              modal={true}
+              open={this.props.feedbackOpen}
+          >
+              <h1 className={'text-center'}>感谢您的耐心投喂！</h1>
+          </Dialog>
       </div>
 	  
     );
   }
 }
 const mapStateToProps = (state) => ({
-	recommendList:state.recommend.recommendList
+	recommendList: state.recommend.recommendList,
+    recommendFeedBack: state.recommend.recommendFeedBack,
+    feedOpen: state.recommend.feedOpen,
+    feedbackOpen: (state.recommend.code===200),
 })
 
 const mapDispatchToProps = (dispatch) => {
@@ -96,8 +116,13 @@ const mapDispatchToProps = (dispatch) => {
         postFeedBack: (data) => {
             dispatch(postFeedBack(data))
         },
-
+        closeFeedBack: () => {
+          dispatch(feedClose())
+        },
+        openFeedBack: () =>{
+            dispatch(feedOpen())
+        }
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecommendModal)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RecommendModal))

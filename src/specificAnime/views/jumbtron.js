@@ -57,7 +57,7 @@ class AnimeMedia extends React.Component {
                                     style = {wrapper}
                                 >
                                         {
-                                            actors.map((actor,i) => {
+                                            actors.forEach((actor,i) => {
                                                 if (actor.actor !== "..." && actor.actor !== '.')
                                                     return(<Chip style={{ margin:4+'px' }} key={i}>{actor.role}:{actor.actor} </Chip>)
                                             })

@@ -2,6 +2,7 @@ import {RECOMMEND_START, RECOMMEND_FAILURE, RECOMMEND_SUCCESS} from './actionTyp
 import {FETCH_ANIMES_SUCCESS, FETCH_ANIMES_START, FETCH_ANIMES_FAILURE} from "./actionType.js"
 import {IMG_LOAD} from './actionType.js'
 import {POST_FEEDBACK_SUCCESS, POST_FEEDBACK_FAILURE, POST_FEEDBACK_START} from "./actionType.js"
+import {FEED_CLOSE, FEED_OPEN, SAVE_FIELD} from "./actionType";
 const recommendStart = () => ({
     type:RECOMMEND_START
 })
@@ -87,9 +88,9 @@ const postFeedbackSuccess = (data) => ({
 })
 export const postFeedBack = (feedback) => {
     return (dispatch) => {
-        const apiUrl = "http://localhost:8080/api/postFeedabck";
-        let data = {"animelist":feedback};/*need to modify*/
+        const apiUrl = "http://localhost:8080/api/postFeedback"
         dispatch(postFeedbackStart());
+        console.log(feedback)
         let options={
 			mode: 'cors',
 			method:"POST",
@@ -97,7 +98,7 @@ export const postFeedBack = (feedback) => {
                 'Accept':"application/json",
                 'Content-Type': 'application/json;charset=utf-8',
             },
-            body:JSON.stringify(data),
+            body:JSON.stringify(feedback),
         }
         return fetch(apiUrl,options).then((response) => {
             response.json().then((responseJson) => {
@@ -110,3 +111,13 @@ export const postFeedBack = (feedback) => {
         })
     };
 }
+export const saveField = (payload) => ({
+  type:SAVE_FIELD,
+  payload
+})
+export const feedOpen = () => ({
+    type: FEED_OPEN
+})
+export const feedClose = () => ({
+    type: FEED_CLOSE
+})

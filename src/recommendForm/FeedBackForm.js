@@ -1,8 +1,10 @@
 import React from 'react';
+import { createForm, createFormField } from 'rc-form';
 import {connect} from "react-redux"
 import {
-  Form, Icon, Rate,
+  Form, Rate,
 } from 'antd';
+import {saveField} from "./actions.js";
 const FormItem = Form.Item;
 class FeedBack extends React.Component{
 	handleSubmit = () => {
@@ -38,7 +40,19 @@ class FeedBack extends React.Component{
 	}
 }
 const mapStateToProps = (state) => ({
-	recommendList: state.recommend.recommendList
+	recommendList: state.recommend.recommendList,
+    recommendFeedBack: state.recommend.recommendFeedBack
 })
 
-export default  Form.create()(connect(mapStateToProps, null)(FeedBack))
+export default connect(mapStateToProps,null)(createForm({
+    mapPropsToFields(props) {
+        console.log('mapPropsToFields', props);
+        return {
+            recommendFeedBack: createFormField(props.recommendFeedBack),
+        };
+    },
+    onFieldsChange(props, fields) {
+        console.log('onFieldsChange', fields);
+        props.dispatch(saveField(fields));
+    },
+})(FeedBack)); // connect(mapStateToProps, null)(FeedBack)

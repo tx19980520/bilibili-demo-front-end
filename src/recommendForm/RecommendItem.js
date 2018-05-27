@@ -1,10 +1,10 @@
 import React,{Component} from "react"
-import NavLink from '../NavLink/NavLink.js'
-import { Card, Icon, Avatar } from 'antd'
+import { withRouter } from "react-router-dom"
+import { Card } from 'antd'
 import './RecommendItem.css'
 const { Meta } = Card
 
-export default class RecommendItem extends Component{
+ class RecommendItem extends Component{
 	state={
 		_deg:0
 	}
@@ -18,12 +18,12 @@ export default class RecommendItem extends Component{
 		let {animeFinished, animePicturePath, _id, fans, animeTitle} = this.props.anime
 		let path =  `/${animePicturePath}`;
 		let redirect = `/spec/${_id}`
-		let status = (animeFinished == 2)?'是':'否'
+		let status = (animeFinished === 2)?'是':'否'
 		return (
 		<div className={"photo-wrap"} style={{WebkitTransform:`rotateY(${this.state._deg}deg)`}} onClick={this.overTurn}>
 			<div className={"side-back"}>
                 <Card
-                cover={<img alt="cover" onLoad = {this.handleLoading}  src={path} className={'img-responsive'} />}
+                cover={<img alt="cover" onLoad = {this.handleLoading}  src={path} className={'img-responsive'} onClick={() => {this.props.history.push(redirect)}} />}
 				>
                 <Meta
                     title={animeTitle}
@@ -32,9 +32,10 @@ export default class RecommendItem extends Component{
             </Card>
             </div>
             <div className={"side-front"}>
-                <img src="./static/sideback.png"/>
+                <img src="./static/sideback.png" alt="sideback" />
             </div>
         </div>
 	)}
 	
-} 
+}
+export default withRouter(RecommendItem)

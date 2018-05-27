@@ -4,31 +4,31 @@ import {MERGE_FEEDBACK_START, MERGE_FEEDBACK_SUCCESS, MERGE_FEEDBACK_FAILURE} fr
 export default (state = {step: "", data:[]}, action) => {
     switch(action.type) {
         case FETCH_FEEDBACK_START: {
-			return {...state}
+			return {...state, step:action.type, }
         }
         case FETCH_FEEDBACK_SUCCESS: {
-			return {...state}
+			return {...state, step:action.type}
         }
 		case FETCH_FEEDBACK_FAILURE: {
-			return {...state}
+			return {...state, step:action.type}
         }
 		case DELETE_FEEDBACK_START: {
-			return {...state}
+			return {...state, step:action.type}
         }
         case DELETE_FEEDBACK_SUCCESS: {
-			return {...state}
+			return {...state, step:action.type}
         }
 		case DELETE_FEEDBACK_FAILURE: {
-			return {...state}
+			return {...state,step:action.type}
         }
 		case MERGE_FEEDBACK_START: {
-			return {...state}
+			return {...state, step:action.type}
         }
         case MERGE_FEEDBACK_SUCCESS: {
-			return {...state}
+			return {...state, step:action.type}
         }
 		case MERGE_FEEDBACK_FAILURE: {
-			return {...state}
+			return {...state, step:action.type}
         }
         default: {
             return state;

@@ -12,7 +12,7 @@ class RecommendList extends Component{
 	}
 	render(){
 		if (this.props.loading && this.props.allRight){
-			if (this.props.code != 200)
+			if (this.props.code !== 200)
 			{
 				return (<div className={'text-center'}><h1>Sorry, the server has some problems, pleace call at 54749110</h1></div>)
 			}

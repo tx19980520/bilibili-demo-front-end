@@ -87,6 +87,28 @@ const mergeFeedbackSuccess = (result) => ({
 })
 
 export const mergeFeedback = (selected) => {
-	
+    return (dispatch) => {
+        const apiUrl = `/api/`; // 这里没改
+        dispatch(mergeFeedbackStart());
+        let data = {"mergeList":selected};
+        let options={
+            mode: 'cors',
+            method:"POST",
+            headers:{
+                'Accept':"application/json",
+                'Content-Type': 'application/json;charset=utf-8',
+            },
+            body:JSON.stringify(data),
+        }
+        return fetch(apiUrl,options).then((response) => {
+            response.json().then((responseJson) => {
+                dispatch(mergeFeedbackSuccess(responseJson));
+            }).catch((error) => {
+                dispatch(mergeFeedbackFailure(error));
+            });
+        }).catch((error) => {
+            dispatch(mergeFeedbackFailure(error));
+        })
+    };
 }
 
