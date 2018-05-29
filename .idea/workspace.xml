@@ -5,25 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3007f46-20f4-4948-8252-a465f4911450" name="Default" comment="for nginx settings the new api uri">
-      <change afterPath="$PROJECT_DIR$/src/FeedBackController/feedbackController.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BilibiliHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BilibiliHome.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FeedBackController/FeedBackController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FeedBackController/FeedBackController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FeedBackController/actionType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FeedBackController/actionType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FeedBackController/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FeedBackController/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FeedBackController/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/FeedBackController/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Index/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Index/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/recommendForm/FeedBackForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/FeedBackForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recommendForm/RecommendItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/RecommendItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/recommendForm/RecommendList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/RecommendList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recommendForm/Recommend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/Recommend.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/recommendForm/RecommendModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/RecommendModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/recommendForm/actionType.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/actionType.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/recommendForm/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/recommendForm/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/recommendForm/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,11 +33,62 @@
     <favorites_list name="bilibili-demo-front-end" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FeedBackForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/recommendForm/FeedBackForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/recommendForm/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/recommendForm/reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommendModal.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/recommendForm/RecommendModal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1938">
+              <caret line="110" column="33" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Recommend.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/recommendForm/Recommend.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3477">
+              <caret line="188" column="44" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ONLINE</find>
       <find>Pl</find>
       <find>this.props.index</find>
       <find>this.props.data</find>
@@ -73,6 +118,7 @@
       <find>const ScrollOverPack = ScrollAnim.OverPack;const ScrollOverPack = ScrollAnim.OverPack;</find>
       <find>postFeedBack</find>
       <find>closeModal</find>
+      <find>post</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,7 +141,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Index/actionType.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/index.js" />
-        <option value="$PROJECT_DIR$/src/Store.js" />
         <option value="$PROJECT_DIR$/src/online/views/onlineChart.js" />
         <option value="$PROJECT_DIR$/src/online/actions.js" />
         <option value="$PROJECT_DIR$/src/online/reducer.js" />
@@ -114,24 +159,25 @@
         <option value="$PROJECT_DIR$/src/Index/views/animeView/animeItem.css" />
         <option value="$PROJECT_DIR$/src/Index/totalIndex.js" />
         <option value="$PROJECT_DIR$/src/BilibiliRouter.js" />
-        <option value="$PROJECT_DIR$/src/FeedBackController/actionType.js" />
-        <option value="$PROJECT_DIR$/src/FeedBackController/reducer.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/actionType.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/actions.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/Recommend.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/RecommendModal.js" />
-        <option value="$PROJECT_DIR$/src/FeedBackController/actions.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/FeedBackForm.js" />
         <option value="$PROJECT_DIR$/src/FeedBackController/feedbackController.css" />
-        <option value="$PROJECT_DIR$/src/FeedBackController/FeedBackController.js" />
         <option value="$PROJECT_DIR$/src/Index/actions.js" />
-        <option value="$PROJECT_DIR$/src/recommendForm/reducer.js" />
         <option value="$PROJECT_DIR$/src/specificAnime/views/jumbtron.js" />
         <option value="$PROJECT_DIR$/src/Index/views/animeView/AnimeItem.js" />
         <option value="$PROJECT_DIR$/src/BilibiliHome.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/RecommendItem.js" />
         <option value="$PROJECT_DIR$/src/recommendForm/RecommendList.js" />
+        <option value="$PROJECT_DIR$/src/Store.js" />
         <option value="$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js" />
+        <option value="$PROJECT_DIR$/src/FeedBackController/actionType.js" />
+        <option value="$PROJECT_DIR$/src/FeedBackController/reducer.js" />
+        <option value="$PROJECT_DIR$/src/FeedBackController/actions.js" />
+        <option value="$PROJECT_DIR$/src/FeedBackController/FeedBackController.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/actionType.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/Recommend.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/reducer.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/FeedBackForm.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/RecommendModal.js" />
+        <option value="$PROJECT_DIR$/src/recommendForm/actions.js" />
       </list>
     </option>
   </component>
@@ -155,9 +201,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="990" />
-    <option name="y" value="97" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="237" />
+    <option name="y" value="236" />
     <option name="width" value="1440" />
     <option name="height" value="765" />
   </component>
@@ -166,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,18 +224,53 @@
               <item name="bilibili-demo-front-end" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bilibili-demo-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilibili-demo-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FeedBackController" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bilibili-demo-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilibili-demo-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bilibili-demo-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilibili-demo-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Index" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bilibili-demo-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilibili-demo-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Index" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="animeView" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bilibili-demo-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bilibili-demo-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendForm" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="submitRecommend&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.9.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bilibili-demo-back-end" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
@@ -265,6 +345,10 @@
       <workItem from="1527251100444" duration="8782000" />
       <workItem from="1527384948867" duration="10037000" />
       <workItem from="1527423869904" duration="7970000" />
+      <workItem from="1527470633539" duration="12024000" />
+      <workItem from="1527510574043" duration="8297000" />
+      <workItem from="1527522046925" duration="5653000" />
+      <workItem from="1527557783777" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="for nginx settings the new api uri">
       <created>1524025378481</created>
@@ -277,7 +361,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246890000" />
+    <option name="totallyTimeSpent" value="273462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,16 +373,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4952153" visible="true" weight="0.23567708" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952153" visible="true" weight="0.23567708" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5169671" side_tool="true" weight="0.3568019" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2497349" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48303288" visible="true" weight="0.35497236" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.48303288" visible="true" weight="0.23314607" />
       <window_info id="Favorites" order="2" sideWeight="0.5047847" side_tool="true" weight="0.2497349" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -347,14 +431,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BilibiliSearch.js" />
-    <entry file="file://$PROJECT_DIR$/src/Store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/online/views/onlineChart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -500,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/animeItem.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -515,27 +584,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FeedBackController/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FeedBackController/actionType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/recommendForm/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -554,67 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/recommendForm/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="121" column="20" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recommendForm/actionType.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="12" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recommendForm/Recommend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="173" column="79" lean-forward="true" selection-start-line="173" selection-start-column="79" selection-end-line="173" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recommendForm/RecommendModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FeedBackController/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FeedBackController/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="48" column="10" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#100#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,9 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -639,16 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -663,9 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -673,19 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FeedBackController/FeedBackController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,9 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,26 +663,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="59" column="58" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FeedBackController/actionType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/views/animeView/AnimeList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/views/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Index/totalIndex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendForm/actionType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FeedBackController/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#102#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FeedBackController/FeedBackController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FeedBackController/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="84" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bilibili-demo-back-end/scrapy_crawl/bilibiliOnline/bilibiliOnline/fuck.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendForm/FeedBackForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendForm/Recommend.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3477">
+          <caret line="188" column="44" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/recommendForm/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        <state relative-caret-position="380">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recommendForm/RecommendModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="110" column="33" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="33" />
           <folding>
-            <element signature="e#0#83#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/recommendForm/FeedBackForm.js">
+    <entry file="file://$PROJECT_DIR$/src/recommendForm/actions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="243">
+          <caret line="104" column="37" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
         </state>
       </provider>
     </entry>

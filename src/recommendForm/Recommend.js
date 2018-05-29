@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Form, AutoComplete, Icon, Input, Button } from 'antd';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import RecommendModal from "./RecommendModal.js"
 import *as actions from "./actions.js"
 import './recommend.css'
@@ -17,6 +17,8 @@ class DynamicFieldSet extends Component {
         }
     }
 	closeModal = () => {
+        // flash the post data
+        this.props.flushData()
 		this.setState({modal:false})
 	}
 	modalOpen = () => {
@@ -65,7 +67,6 @@ class DynamicFieldSet extends Component {
         console.log("handle")
         this.props.form.validateFields((err, values) => {
             if (!err) {
-				console.log(values.names)
                 this.props.submitData(values.names)
             }
             console.log(err)
@@ -187,8 +188,11 @@ const mapDispatchToProps = (dispatch) => {
         submitData: (data) => {
             dispatch(actions.submitRecommend(data))
         },
-        optionMemset:() => {
+        optionMemset: () => {
             dispatch(actions.fetchAnimeStart())
+        },
+        flushData: () => {
+            dispatch(actions.flushData())
         }
     }
 }

@@ -5,7 +5,7 @@ import Dialog from 'material-ui/Dialog';
 import FeedBackForm from "./FeedBackForm.js"
 import FlatButton from 'material-ui/FlatButton'
 import RecommendList from './RecommendList.js'
-import { postFeedBack, feedClose, feedOpen } from "./actions.js"
+import { postFeedBack, feedClose, feedOpen, flushData } from "./actions.js"
 import "./RecommendModal.css"
 /*
  * A modal dialog can only be closed by selecting one of the actions.
@@ -16,13 +16,6 @@ import "./RecommendModal.css"
 };
 
 class RecommendModal extends React.Component {
-	state = {
-		feedOpen:false
-	}
-
-    submitFeedBack = (postData) => {
-
-    }
 
 	handleClose = () => {
     this.props.modalClose();
@@ -30,11 +23,11 @@ class RecommendModal extends React.Component {
 
 
 	postFeedBack = () => {
-      this.props.postFeedBack(this.props.recommendFeedBack)
+      this.props.postFeedBack(this.props.postList, this.props.recommendFeedBack)
 	}
-	redirectHome = () => {
-	    console.log(this.props.history)
-        this.props.history.push("/spec/1512")
+	flush = () => {
+        this.handleClose()
+        this.props.flush()
     }
 
   render() {
@@ -42,7 +35,7 @@ class RecommendModal extends React.Component {
       <FlatButton
         label="转身离开"
         primary={true}
-        onClick={this.props.handleClose}
+        onClick={this.handleClose}
       />,
       <FlatButton/*for the next */
         label="请填写你的满意程度"
@@ -67,7 +60,7 @@ class RecommendModal extends React.Component {
           <FlatButton
               label="回到主页"
               primary={true}
-              onClick={this.redirectHome}
+              onClick={this.flush}
           />
       ];
 	
@@ -89,7 +82,7 @@ class RecommendModal extends React.Component {
           open={this.props.feedOpen}
           autoScrollBodyContent={true}
         >
-		<FeedBackForm submitAjax = {this.submitFeedBack}/>
+		<FeedBackForm />
         </Dialog>
           <Dialog
               title="感谢投喂"
@@ -109,19 +102,23 @@ const mapStateToProps = (state) => ({
     recommendFeedBack: state.recommend.recommendFeedBack,
     feedOpen: state.recommend.feedOpen,
     feedbackOpen: (state.recommend.code===200),
+    postList: state.recommend.postList,
 })
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        postFeedBack: (data) => {
-            dispatch(postFeedBack(data))
+        postFeedBack: (recommendList, feedback) => {
+            dispatch(postFeedBack(recommendList, feedback))
         },
         closeFeedBack: () => {
           dispatch(feedClose())
         },
         openFeedBack: () =>{
             dispatch(feedOpen())
-        }
+        },
+        flush: () => {
+            dispatch(flushData())
+        },
     }
 }
 

@@ -3,8 +3,8 @@ import AnimeItem from "./AnimeItem.js";
 import QueueAnim from 'rc-queue-anim';
 import ScrollAnim from 'rc-scroll-anim';
 import {Spin} from 'antd'
-import "./animeItem.css"
 import {Row, Col} from "react-flexbox-grid"
+import "./animeItem.css"
 const ScrollOverPack = ScrollAnim.OverPack;
 class AnimeList extends Component {
 
