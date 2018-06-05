@@ -2,7 +2,16 @@ import { RECOMMEND_START, RECOMMEND_FAILURE, RECOMMEND_SUCCESS } from './actionT
 import { FETCH_ANIMES_SUCCESS, FETCH_ANIMES_START, FETCH_ANIMES_FAILURE } from "./actionType.js"
 import { IMG_LOAD } from './actionType.js'
 import { POST_FEEDBACK_SUCCESS, POST_FEEDBACK_FAILURE, POST_FEEDBACK_START } from "./actionType.js"
-import { FEED_CLOSE, FEED_OPEN, SAVE_FIELD, FLUSH_DATA } from "./actionType";
+import {
+    FEED_CLOSE,
+    FEED_OPEN,
+    SAVE_FIELD,
+    FLUSH_DATA,
+    FLUSH_SEARCH,
+    MODIFY_POSTLIST,
+    MODIFY_POSTKEY,
+    CHANGE_POSTLIST
+} from "./actionType.js";
 const recommendStart = () => ({
     type:RECOMMEND_START
 })
@@ -131,4 +140,24 @@ export const feedClose = () => ({
 
 export const flushData = () => ({//clean all data after a post feedback
     type: FLUSH_DATA
+})
+
+export const flushSearch = () => ({
+    type: FLUSH_SEARCH
+})
+
+export const modifyPostList = (array) => ({
+    type: MODIFY_POSTLIST,
+    array
+})
+
+export const modifyPostKey = (keys) => ({
+    type: MODIFY_POSTKEY,
+    keys
+})
+export const changePostList = (pos, word) => ({
+    type: CHANGE_POSTLIST,
+    pos,
+    word
+
 })

@@ -8,24 +8,25 @@ import {saveField} from "./actions.js";
 const FormItem = Form.Item;
 class FeedBack extends React.Component{
      render(){
-	    const { getFieldDecorator } = this.props.form;
+         let formItemList = [];
+         const { getFieldDecorator } = this.props.form;
+         for(let i = 0, len = this.props.recommendFeedBack.length; i < len; ++i)
+         {
+             formItemList.push(<FormItem
+                 key={i}
+                 label={this.props.recommendFeedBack[i].animeTitle}
+             >
+                 {getFieldDecorator(this.props.recommendFeedBack[i].animeTitle, {
+                     initialValue: 3.0,
+                 })(
+                     <Rate />
+                 )}
+             </FormItem>)
+         }
 	    return (
             <Form >
-                {// 这个地方还没有实现双向绑定
-                    this.props.recommendList.map( (recommend, i) => {
-                        return(
-                            <FormItem
-                                key={i}
-                                label={recommend.animeTitle}
-                            >
-                                {getFieldDecorator(recommend.animeTitle, {
-                                    initialValue: 3.0,
-                                })(
-                                    <Rate />
-                                )}
-                            </FormItem>
-                        )
-                    })
+                {
+                    formItemList
                 }
             </Form>
         )
@@ -38,7 +39,7 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, null)(createForm({
     mapPropsToFields(props) {
-        console.log('mapPropsToFields', props);
+        // console.log('mapPropsToFields', props);
         return {
             recommendFeedBack: createFormField(props.recommendFeedBack),
         };

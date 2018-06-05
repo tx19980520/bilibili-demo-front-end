@@ -69,22 +69,31 @@ class FeedBackController  extends React.Component{
         const expandedRowRender = (record) => {
             const columns = [
                 { title: 'Name', dataIndex: 'name', key: 'name' },
-                { title: 'Status', key: 'state', render: () => <span><Badge status="success" />Finished</span> },
-                { title: 'Type', dataIndex: 'type', key: 'type' },// recommend or feedback
+                { title: 'Status', key: 'status', dataIndex: "status" ,
+                    render:(status)=>{
+                    const pin = (status === "recommend")?<span><Badge status="success" />{status}</span>: <span><Badge status="processing" />{status}</span>
+                        return pin
+                }
+                    },
                 { title: 'Score', dataIndex: 'score', key: 'score' },
             ];
-
-            const data = [];// 数据在 record 里面， 我们把附加内容单独拿出来写
-            for (let i = 0; i < 3; ++i) {
-                data.push({
-                    key: i,
-                    status:'finished',
-                    date: '2014-12-24 23:12:00',
-                    name: 'This is production name',
-                    type:'recommend',
-                    score: '5',
+            let recommendData = record.recommendList.map((item, i) => {
+                return ({
+                    key: i*-1,
+                    name:item.animeTitle,
+                    status:'recommend',
+                    score: `${item.score}`,
                 });
-            }
+            });
+            let animeData = record.animeList.map((item, i) => {
+                return ({
+                    key: i+record.recommendList.length,
+                    name:item,
+                    status:'raw',
+                    score: '-',
+                });
+            });
+            let data = animeData.concat(recommendData);
             return (
                 <Table
                     columns={columns}
@@ -108,13 +117,15 @@ class FeedBackController  extends React.Component{
             </Col>
             </Row>
         // 注意下我们的数据的产生主要是在一次性产生，因而要注意
+        console.log(this.props.data)
         const data = this.props.data.map((item) => {
             return {
                 key:item._id,
                 createdAt: new Date(item.date).toLocaleString(),
                 IsMerge: (item.merge)?"是":"否",
                 ID: item._id,
-                animeList:item.animeList
+                animeList:item.animeList,
+                recommendList:item.recommendList
             }
         })
 
