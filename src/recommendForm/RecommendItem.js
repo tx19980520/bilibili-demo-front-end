@@ -32,7 +32,7 @@ const { Meta } = Card
             </Card>
             </div>
             <div className={"side-front"}>
-                <img src="./static/sideback.png" alt="sideback" />
+                <img src="./full/sideback.png" alt="sideback" />
             </div>
         </div>
 	)}

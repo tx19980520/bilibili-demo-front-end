@@ -71,6 +71,7 @@ class RecommendModal extends React.Component {
           actions={actions}
           modal={true}
 		  contentStyle={customContentStyle}
+          autoScrollBodyContent={true}
           open={this.props.open}
         >
           <RecommendList />

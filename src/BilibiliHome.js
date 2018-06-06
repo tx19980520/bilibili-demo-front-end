@@ -26,6 +26,9 @@ class Container extends React.Component {
     FeedBack = () => {
         this.setState({choose: 2})
     }
+    File = () => {
+        this.setState({choose: 3})
+    }
     onCollapse(collapsed){
         console.log(collapsed);
         this.setState({ collapsed });
@@ -64,9 +67,11 @@ class Container extends React.Component {
                                 <span>Controller</span>
                             </div>
                         </Menu.Item>
-                        <Menu.Item key="9">
-                            <Icon type="file" />
-                            <span>File</span>
+                        <Menu.Item key="4">
+                            <div onClick={this.File}>
+                                <Icon type="file" />
+                                <span>File</span>
+                            </div>
                         </Menu.Item>
                     </Menu>
                 </Sider>

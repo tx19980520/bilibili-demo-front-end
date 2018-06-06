@@ -34,7 +34,7 @@ export const loadStatus = (pos) => ({
 })
 export const submitRecommend = (animelist) => {
     return (dispatch) => {
-        const apiUrl = "http://localhost:8080/api/postRecommend";
+        const apiUrl = "/api/postRecommend";
         let data = {"animelist":animelist};
         dispatch(recommendStart());
         let options={
