@@ -28,30 +28,31 @@ class AnimeMedia extends React.Component {
 
             return (
                 <Media>
-                    <QueueAnim>
+                    <QueueAnim duration={2000}>
                         {
                     [
                         <Media key="one" left className={"media-img"}>
                         <QueueAnim>
-                                <Media object src={cover} alt="cover" className={"img-full"}/>
+                                <Media object src={cover} alt="cover" className={"media-img img-full"}/>
                         </QueueAnim>
                         </Media>,
-                    <Media body>
+                    <Media body key={"body"}>
                         <Media heading>
                             <QueueAnim>
                             {[
-                                <QueueAnim>
+                                <QueueAnim key={"special"}>
                                 <div key="two" className={"media-heading font-color"}>
                                     {data.animeTitle}
                                 </div>
                                 </QueueAnim>,
-                                <QueueAnim>
+                                <QueueAnim key={"hard"}>
                                 {   tags.map((tag,i) => {
                                     return (<Tag key={i} color="blue">{tag}</Tag>)
                                 })
                                 }
                                 </QueueAnim>,
                                 <QueueAnim
+                                    key={"wrapper"}
                                     component={'div'}
                                     className={'actors'}
                                     style = {wrapper}
@@ -96,20 +97,4 @@ class AnimeMedia extends React.Component {
     }
 }
 
-
-/*const mapDispatchToProps = (dispatch) => {
-    return {
-        refreshSearch:(word)=>{
-            dispatch(searchInit(word))
-        },
-        search:(word)=>{
-            dispatch(searchWord(word))
-        }
-    }
-};
-const mapStateToProps = (state) =>{
-    return {searchList:state.search.list}
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Complete);*/
-//暂时想的是这个组件做成一个纯傻瓜组件
 export default AnimeMedia;

@@ -25,5 +25,6 @@
 .img-responsive {
     display: inline-block;
     height: 255px;
+	width: 207px;
     max-width: 100%;
 }

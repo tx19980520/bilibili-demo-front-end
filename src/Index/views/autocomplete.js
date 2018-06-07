@@ -1,5 +1,5 @@
-import React ,{Component}from "react"
-import { Icon, Button, Input, AutoComplete } from 'antd';
+import React ,{ Component }from "react"
+import { Input, AutoComplete } from 'antd';
 import {Row,Col} from "react-flexbox-grid"
 import "./search.css"
 
@@ -13,16 +13,6 @@ class Complete extends Component {
             value:""
         }
     }
-    clickSearchButton = () => {
-        if(this.state.value !== "")
-        {
-            this.search(this.state.value)
-        }
-        else{
-            alert("搜索信息不能为空");
-        }
-
-    };
 
     render(){
         return (
@@ -41,11 +31,6 @@ class Complete extends Component {
                                     filterOption={false/*{(inputValue, option) => option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1}*/}
                                 >
                                     <Input value={this.state.value}
-                                        suffix={(
-                                            <Button className="search-btn" size="large" type="primary" onClick={this.clickSearchButton}>
-                                                <Icon type="search" />
-                                            </Button>
-                                        )}
                                     />
                                     </AutoComplete>
                             </div>

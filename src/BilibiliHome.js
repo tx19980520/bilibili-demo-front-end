@@ -27,7 +27,7 @@ class Container extends React.Component {
         this.setState({choose: 2})
     }
     File = () => {
-        this.setState({choose: 3})
+        window.location = "https://github.com/tx19980520/bilibiliData"
     }
     onCollapse(collapsed){
         console.log(collapsed);

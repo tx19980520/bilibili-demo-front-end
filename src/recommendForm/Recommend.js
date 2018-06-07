@@ -80,11 +80,17 @@ class DynamicFieldSet extends Component {
     }
 
     handleSubmit = () => {
-        this.props.form.validateFields((err, values) => {
+        let options = {
+            first:true
+        }
+        this.props.form.validateFields(options,(err, values) => {
             console.log("err",err)
             if (!err) {
                 this.setState({modal:true})
                 this.props.submitData(values.values)
+            }
+            else{
+                alert(err["0"].errors["0"].message)
             }
 
         });
@@ -92,6 +98,16 @@ class DynamicFieldSet extends Component {
 	checkSame = (rule, value, callback) => {
 			let values = this.props.form.getFieldValue("values")
 			let count = 0;
+			if(value === "")
+            {
+                callback("请勿留下空白")
+                return;
+            }
+            if(values.length < 2)
+            {
+                callback("请填写两个以上的番剧，最好超过5个");
+                return ;
+            }
 			for(let i = 0, len = values.length; i < len; ++i)
 			{
 				if(values[i] === value)
@@ -100,7 +116,7 @@ class DynamicFieldSet extends Component {
 				}
 				if(count === 2)
                 {
-					callback(alert('含有相同的番剧'))
+					callback('含有相同的番剧')
 					return;
 				}
 			}

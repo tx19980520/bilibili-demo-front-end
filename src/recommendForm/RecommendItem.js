@@ -23,13 +23,15 @@ const { Meta } = Card
 		<div className={"photo-wrap"} style={{WebkitTransform:`rotateY(${this.state._deg}deg)`}} onClick={this.overTurn}>
 			<div className={"side-back"}>
                 <Card
-                cover={<img alt="cover" onLoad = {this.handleLoading}  src={path} className={'img-responsive'} onClick={() => {this.props.history.push(redirect)}} />}
+                cover={<img alt="cover" onLoad = {this.handleLoading}
+				src={path} className={'img-responsive'} 
+				onClick={() => {this.props.history.push(redirect)}} />}
 				>
-                <Meta
-                    title={animeTitle}
-                    description= {<div><p>{fans}</p><p>是否完结：{status}</p></div>}
-                />
-            </Card>
+					<Meta
+						title={animeTitle}
+						description= {<div><p>{fans}</p><p>是否完结：{status}</p></div>}
+					/>
+				</Card>
             </div>
             <div className={"side-front"}>
                 <img src="./full/sideback.png" alt="sideback" />

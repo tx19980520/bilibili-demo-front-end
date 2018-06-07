@@ -1,13 +1,10 @@
 import React,{Component} from 'react';
 import { Jumbotron } from 'reactstrap';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
 import AnimeMedia from "./jumbtron.js";
 import {connect} from "react-redux";
 import * as funcactions from "../actions";
 import { withRouter } from 'react-router-dom'
 import QueueAnim from 'rc-queue-anim';
-import RaisedButton from 'material-ui/RaisedButton';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import Icon from 'antd/lib/icon';
 import "./bugumiList.css"
@@ -144,7 +141,7 @@ class Episode extends Component
                         }}
                         animation={aAnimation}
                     >
-                        <img src={image} alt="bugumi pic" onLoad={this.bugumiLoad}  width="100%" height="100%" />
+                        <img src={image} alt="bunumi-pic" onLoad={this.bugumiLoad}  width="100%" height="100%" />
                     </TweenOne>
                     <TweenOneGroup
                         enter={[
@@ -237,26 +234,7 @@ class DashBoard extends Component{
 
     };
     render() {
-        const actions = [
-            <FlatButton
-                label="为本AI喂口粮食吧"
-                primary={true}
-                keyboardFocused={true}
-                onClick={this.AddVote}//不仅要ajax，并且还要跳出，投票成功
-            />,
-            <FlatButton
-                label="Cancel"
-                primary={true}
-                onClick={this.handleDialogClose}
-            />,
-        ];
-        const nestedactions = [
-            <FlatButton
-                label="退出"
-                primary={true}
-                onClick={this.handleNestedDialogClose}
-            />
-        ];
+
         let background = `/${this.props.specific.result.cover}`
 
         return (
@@ -273,30 +251,6 @@ class DashBoard extends Component{
                         allright={this.props.specific.allready}
                         className={'font-color'}
 					/>
-                    <div className="lead">
-                        <div className={"lead-button"}>
-                        <RaisedButton label="投票" primary={true}  onClick={this.handleDialogOpen} />
-                        </div>
-                        {/*这个也要用redux让我觉得很难受*/}
-                        <Dialog
-                            title="开心投喂，装备不要一分钱"
-                            actions={actions}
-                            modal={false}
-                            open={this.props.specific.modalSwitch}
-                            onRequestClose={this.handleDialogClose}
-                        >
-                            {/*这个地方得有一个填入的表单，这个地方需要login*/}
-                        </Dialog>
-                        <Dialog
-                            title="提交结果"
-                            actions={nestedactions}
-                            modal={false}
-                            open={this.props.specific.nestedSwitch}
-                            onRequestClose={this.handleDialogClose}
-                        >
-                            {/*这个地方是给出一个根据现有的填写情况进行的一个推荐的表现*/}
-                        </Dialog>
-                    </div>
                 </Jumbotron>
                 <Episode episodes={this.props.specific.result.specific.episodes} classname={"pic-details-demo"}/>
             </div>

@@ -7,7 +7,7 @@ export default (state = {step: ANIME_FETCH_START, page: -1, pageSearch: false,
     switch(action.type) {
         case ANIME_FETCH_SUCCESS: {
             let {loadController} = state;
-            for (let i = 0; i < 20; ++i)
+            for (let i = 0; i < action.result.list.length; ++i)
             {
                 loadController[i] = 0;
             }
@@ -31,10 +31,8 @@ export default (state = {step: ANIME_FETCH_START, page: -1, pageSearch: false,
         case LOAD_CHANGE:{
             let {loadController, allright} = state;
             loadController[action.pos] = 1;
-            if (allright === true)
-                return {...state,allright:allright, loadController:loadController};
             allright = true;
-            for (let i = 0; i < 20; ++i)
+            for (let i = 0; i < loadController.length; ++i)
             {
                 if (loadController[i] === 0)
                 {
@@ -46,15 +44,15 @@ export default (state = {step: ANIME_FETCH_START, page: -1, pageSearch: false,
         }
         /*about search */
         case SEARCH_WORD_START:{
+            return {...state, searchCode: action.code, animesList: [], reload: true, pageSearch: true, allright: false};
+        }
+        case SEARCH_WORD_SUCCESS:{
             let loadController = [];
-            for (let i = 0; i < 20; ++i)
+            for (let i = 0; i < action.result.animeList.length; ++i)
             {
                 loadController[i] = 0;
             }
-            return {...state, searchCode:action.code, animesList:[], reload:true, pageSearch:true, allright:false, loadController:loadController};
-        }
-        case SEARCH_WORD_SUCCESS:{
-            return {...state, page:action.result.totalPage, pageSearch:true, searchCode:action.code, searchList: action.result.searchList, animesList:action.result.animeList, reload:false}
+            return {...state, page: action.result.totalPage, pageSearch: true, searchCode: action.code, searchList: action.result.searchList, animesList: action.result.animeList, reload: false}
         }
         case SEARCH_WORD_FAILURE:{
             return {...state, searchCode:201, searchList:[], animesList:[]}
