@@ -1,9 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
-import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton'
 import * as actions from "./actions.js"
-import { Table, Badge, Spin } from 'antd';
+import { Table, Badge } from 'antd';
 import {Row, Col} from "react-flexbox-grid"
 import "./feedbackController.css"
 
@@ -16,10 +15,12 @@ class FeedBackController  extends React.Component{
     }
 
     mergeFeedback = () => {
-        this.props.mergeFeedback(this.props.selectedRowKeys)
+        alert("功能暂不对外开放")
+        //this.props.mergeFeedback(this.props.selectedRowKeys)
     }
 
     deleteFeedback = () => {
+        alert("功能暂不对外开放")
         this.props.deleteFeedback(this.props.selectedRowKeys)
     }
 
@@ -117,7 +118,6 @@ class FeedBackController  extends React.Component{
             </Col>
             </Row>
         // 注意下我们的数据的产生主要是在一次性产生，因而要注意
-        console.log(this.props.data)
         const data = this.props.data.map((item) => {
             return {
                 key:item._id,
@@ -129,7 +129,7 @@ class FeedBackController  extends React.Component{
             }
         })
 
-        let contain;
+        /*let contain;
         if (this.props.feedbackWord === "waiting")
         {
             contain = <Spin />
@@ -137,13 +137,7 @@ class FeedBackController  extends React.Component{
         else{
             contain = <div className={"text-center"}>{this.props.feedbackWord}</div>
         }
-        const actions = [
-            <FlatButton
-                label="返回"
-                primary={true}
-                onClick={this.props.feedbackClose}
-            />
-        ];
+        */
 
         return (
             <div>
@@ -154,14 +148,6 @@ class FeedBackController  extends React.Component{
                     expandedRowRender={expandedRowRender}
                     dataSource={data}
                 />
-                <Dialog
-                    title="感谢投喂"
-                    actions={actions}
-                    modal={true}
-                    open={this.props.feedbackOpen}
-                >
-                    {contain}
-                </Dialog>
                 {CURDgroups}
             </div>
         );

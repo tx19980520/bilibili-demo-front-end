@@ -66,7 +66,7 @@ export const fetchAnimebyPage = (page) => {
             });
         }).catch((error) => {
             dispatchIfValid(fetchAnimeFailure(error),dispatch,pageId);
-        })
+        });
     };
 };
 

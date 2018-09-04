@@ -76,7 +76,7 @@ class AnimeMedia extends React.Component {
                             <div key="five" className={"media-rating"}>
                                 <div className={'rating-setting'}>
                                     <i className="material-icons font-color">star</i>
-                                    <div className='rating-font font-color'>{rating[0].score}</div>
+                                    <div className='rating-font font-color'>{(rating[0] !== null)?rating[0].score:5}</div>
                                 </div>
                                 <div className={'rating-setting'}>
                                     <i className="material-icons font-color">attach_money</i>
@@ -91,7 +91,7 @@ class AnimeMedia extends React.Component {
             );
         }
         else{
-            return <Spin />
+            return <div style={{minHeight:302.4, paddingTop:150}} className={'text-center'}><Spin  size="large" /></div>
         }
 
     }

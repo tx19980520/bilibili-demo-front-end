@@ -2,7 +2,7 @@
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
+  "proxy": "http://bilibili.cqdulux.cn",
   "dependencies": {
     "ant-design-pro": "^1.1.0",
     "antd": "^3.3.0",

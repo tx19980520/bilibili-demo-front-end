@@ -102,7 +102,7 @@ const postFeedbackSuccess = (data) => ({
 })
 export const postFeedBack = (postList, feedback) => {
     return (dispatch) => {
-        const apiUrl = "http://localhost:8080/api/postFeedback"
+        const apiUrl = "/api/postFeedback"
         dispatch(postFeedbackStart());
         let options={
 			mode: 'cors',

@@ -38,7 +38,7 @@ class IndexPage extends Component {
     render() {
         let index = this.props.index
         this.page = (index.pageSearch)?<Page word={this.state.nowword} pageChange={this.props.wordChange} totalPage={index.page}/>:<Page pageChange={this.changePage} totalPage={index.page}/>;
-        this.animes = (!index.reload ) ?<AnimeList allright={index.allright} onLoadSystem={this.props.changeLoad} list={index.animesList}/>:<div className={"loading"}><Spin /></div>;
+        this.animes = (!index.reload ) ?<AnimeList key={"animelist"} allright={index.allright} onLoadSystem={this.props.changeLoad} list={index.animesList}/>:<div className={"loading"}><Spin /></div>;
         return (
             <div>
                 <Online />

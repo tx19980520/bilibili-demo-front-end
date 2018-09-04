@@ -74,6 +74,8 @@ class Episode extends Component
     </GridList>
   </div>*/
         let dataArray = this.props.episodes;
+        let imageData = this.props.episodesPicture;
+        console.log("sdadsd", imageData)
         const imgWidth = 110;
         const imgHeight = 76;
         const imgBoxWidth = 130;
@@ -82,7 +84,7 @@ class Episode extends Component
         return dataArray.map((item, i) => {
             const content =item.index_title;
             const title = `第${item.index}`;
-            const image = '/full/00a99023475d8e885b63dc46d7881ea31c281d2e.jpg';
+            const image = (imageData.length === 0)?'/full/00a99023475d8e885b63dc46d7881ea31c281d2e.jpg':imageData[i];
             const isEnter = typeof this.state.picOpen[i] === 'boolean';
             const isOpen = this.state.picOpen[i];
             const left = isEnter ? 0 : imgBoxWidth * (i % linenum);
@@ -252,7 +254,10 @@ class DashBoard extends Component{
                         className={'font-color'}
 					/>
                 </Jumbotron>
-                <Episode episodes={this.props.specific.result.specific.episodes} classname={"pic-details-demo"}/>
+                <Episode
+                    episodes={this.props.specific.result.specific.episodes}
+                    episodesPicture = {this.props.specific.result.specific.episodesPicture}
+                    classname={"pic-details-demo"}/>
             </div>
         );
     };

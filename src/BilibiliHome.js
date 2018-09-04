@@ -29,7 +29,7 @@ class Container extends React.Component {
     File = () => {
         window.location = "https://github.com/tx19980520/bilibiliData"
     }
-    onCollapse(collapsed){
+    onCollapse = (collapsed) => {
         console.log(collapsed);
         this.setState({ collapsed });
     }
